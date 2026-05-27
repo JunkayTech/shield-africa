@@ -69,7 +69,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-xs text-white/60 sm:flex-row sm:px-8">
-          <p>&copy; {new Date().getFullYear()} Shield Africa Foundation. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shield Africa. All rights reserved.</p>
           <div className="flex items-center gap-2">
             {socials.map(({ href, label, Icon }) => (
               <a

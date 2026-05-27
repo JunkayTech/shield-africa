@@ -15,7 +15,7 @@ export default function HomePage() {
       <Marquee />
       <Stats />
       <Programs />
-      <Partners />
+      <UpcomingEvents />
       <Testimonials />
       <Newsletter />
     </PageLayout>
@@ -49,7 +49,7 @@ function Hero() {
         <Reveal>
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/90 backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Est. 2014 · Operating in 14 states
+            Advancing sustainable development across Africa.
           </div>
         </Reveal>
 
@@ -64,9 +64,9 @@ function Hero() {
 
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            We partner with communities, governments and grassroots leaders to
-            unlock agency, capital and capacity — building futures that outlast
-            our presence.
+            We design and implement impactful programmes that strengthen food systems,
+promote quality education and gender inclusion, improve livelihoods and
+support vulnerable populations.
           </p>
         </Reveal>
 
@@ -88,41 +88,19 @@ function Hero() {
             </Link>
           </div>
         </Reveal>
-
-        <Reveal delay={500}>
-          <div className="mt-16 grid max-w-2xl grid-cols-3 gap-8 border-t border-white/20 pt-8">
-            {[
-              { v: "165K+", l: "Lives touched" },
-              { v: "108", l: "Communities" },
-              { v: "14", l: "States in Nigeria" },
-            ].map((s) => (
-              <div key={s.l}>
-                <div className="font-serif text-3xl font-light text-white sm:text-4xl">
-                  {s.v}
-                </div>
-                <div className="mt-1 text-xs uppercase tracking-[0.15em] text-white/60">
-                  {s.l}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );
 }
 
 function Marquee() {
-  const items = [
-    "Agriculture",
-    "Education",
-    "Humanitarian Aid",
-    "Health",
-    "Women Empowerment",
-    "Youth Capacity",
-    "Climate Resilience",
-    "Community Dev.",
-  ];
+const items = [
+  "Agrifood Systems",
+  "Education",
+  "Humanitarian Aid",
+  "Youth & Women Inclusion",
+  "Climate Resilience",
+];
   return (
     <div className="border-y border-border bg-surface py-6 overflow-hidden">
       <div className="flex animate-marquee gap-12 whitespace-nowrap">
@@ -224,11 +202,11 @@ function Programs() {
 }
 
 const imageMap: Record<string, string> = {
-  agriculture: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
-  education: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
-  medical: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-  women: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
-  humanitarian: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+  agriculture: "/images/agriculture.jpg",
+  education: "/images/education.jpg",
+  medical: "/images/medical.jpg",
+  women: "/images/women.jpg",
+  humanitarian: "/images/humanitarian.jpg",
 };
 
 export function ProgramCard({ program }: { program: Program }) {
@@ -264,42 +242,78 @@ export function ProgramCard({ program }: { program: Program }) {
   );
 }
 
-function Partners() {
-  const partners = [
-    "UNDP",
-    "USAID",
-    "FCDO",
-    "Mastercard Foundation",
-    "Ford Foundation",
-    "Federal Ministry of Agriculture",
-    "Open Society",
-    "African Union",
-  ];
+function UpcomingEvents() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="text-center">
             <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-              Trusted Partners
+              Upcoming Events
             </div>
-            <h2 className="mx-auto mt-4 max-w-2xl font-serif text-3xl font-light sm:text-4xl">
-              In partnership with governments, donors and global institutions.
-            </h2>
           </div>
         </Reveal>
+
         <Reveal delay={120}>
-          <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4">
-            {partners.map((p) => (
-              <div
-                key={p}
-                className="flex aspect-[3/1] items-center justify-center bg-surface-elevated px-4 text-center"
-              >
-                <span className="font-serif text-base font-medium tracking-tight text-muted-foreground transition-colors hover:text-foreground sm:text-lg">
-                  {p}
-                </span>
+          <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/sustainability_lab.jpg"
+                  alt="Sustainability Lab Event"
+                  width={1200}
+                  height={800}
+                  className="h-full w-full object-cover"
+                />
               </div>
-            ))}
+
+              <div>
+                <div className="inline-flex rounded-full bg-accent/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary">
+                  Featured Event
+                </div>
+
+                <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
+                  Sustainability Lab 2026 - MAY EDITION
+                </h3>
+
+                <div className="mt-8 space-y-3 text-sm text-muted-foreground">
+                  <p>
+                    <span className="font-medium text-foreground">Date:</span>{" "}
+                    Friday, 29th May, 2026.
+                  </p>
+
+                   <p>
+                    <span className="font-medium text-foreground">Time:</span>{" "}
+                    4:00PM Prompt
+                  </p>
+                  <p>
+                    <span className="font-medium text-foreground">
+                      Location:
+                    </span>{" "}
+                    SKYWIDE STUDIOS 2nd Floor, Blook B, A.R.O Plaza, 
+                    2105 Herbert Macaulay Way, Wuse Zone 6
+                    Abuja, Nigeria
+                  </p>
+
+                  <p>
+                    <span className="font-medium text-foreground">
+                      Theme:
+                    </span>{" "}
+                    Financial Intelligence and Profit Sustainability.
+                  </p>
+                </div>
+
+                <Link
+                  href="/events"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
+                >
+                  View Event Details
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+            </div>
           </div>
         </Reveal>
       </div>
@@ -311,21 +325,27 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "Shield Africa didn't just bring inputs — they brought a model. Our cooperative now feeds three neighboring villages.",
-      name: "Mama Felicia Adoyi",
-      role: "Cooperative Lead · Naka, Benue",
+        "Before now, we have experienced a lot of difficulties in farming as a result of insufficient funds to acquire the necessities for farming. We are very grateful for Shield Africa's intervention and we pray that you will continue to have and also reach out to other communities as you have reached us today.",
+      name: "Mrs. Abi Rose Eneh",
+      role: "Chairlady, Owolaole Housewives · Multipurpose Association",
     },
     {
       quote:
-        "Their rigor on data, their humility on the ground — it's rare. They are the partner we measure others against.",
-      name: "Dr. Yetunde Okafor",
-      role: "Programme Officer · UNDP Nigeria",
+        "The lack of access to fertilizers has crippled the productivity of our farming enterprise in this community. This is because of the exorbitant prices which has made it relatively impossible to acquire these inputs by most of our farmers. But today, Shield Africa has distributed this agro inputs free of charge and we are so excited.",
+      name: "Mr. Ogoh Abi Johnson",
+      role: "Chairman · Ayigbu Multipurpose Cooperative Society",
     },
     {
       quote:
-        "I learned to read a balance sheet and to negotiate with offtakers. That changed everything for my farm.",
-      name: "Ibrahim Suleiman",
-      role: "Graduate · Young Agri-preneur Cohort 06",
+        "We are saying thank you to Shield Africa for this initiative, your vision and mission. I know that it is not easy to work with the visually impaired children as well as the staff. However, you have remained persistent and courageous. We are grateful for both the learning and feeding materials you have brought us.",
+      name: "Mrs. Rose Uganden",
+      role: "Principal · School for the Blind, FCT Abuja",
+    },
+    {
+      quote:
+        "On behalf of myself and community, I want to sincerely appreciate Shield Africa for this initiative of providing agro inputs which I know will go a long way in cushioning the many adversities we have been faced with as a farming community.",
+      name: "Chief Opah Emmanuel Oboh",
+      role: "Chief · Oju Community, Benue State",
     },
   ];
   return (
@@ -378,8 +398,8 @@ function Newsletter() {
                 Stay updated on impact stories from the field.
               </h2>
               <p className="mt-5 max-w-md text-base text-muted-foreground">
-                A monthly letter from the communities we serve — never spam,
-                always signal.
+               Stay updated with our programmes, community activities,
+development initiatives and upcoming events across Africa.
               </p>
               <form
                 className="mt-8 flex max-w-md flex-col gap-3 sm:flex-row"

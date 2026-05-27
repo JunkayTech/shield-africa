@@ -107,7 +107,7 @@ export default function AboutPage() {
                   principle: communities lead, we resource.
                 </p>
                 <p>
-                  Our teams live in the regions they serve. Our grantmaking is
+                  Our teams live in the regions they serve. Our grant making is
                   audited. Our outcomes are measured against the goals
                   communities set for themselves — not the assumptions of
                   distant capitals.

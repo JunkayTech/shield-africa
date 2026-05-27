@@ -86,11 +86,9 @@ export const stats = [
   { label: "Communities Impacted", value: 108, suffix: "" },
   { label: "Youth Empowered", value: 23000, suffix: "+" },
   { label: "Farmers Supported", value: 25000, suffix: "+" },
-  { label: "Active Projects", value: 8, suffix: "" },
+  { label: "Active Projects", value: 6, suffix: "" },
   { label: "Women Reached", value: 12800, suffix: "" },
   { label: "Total Beneficiaries", value: 165000, suffix: "" },
-  { label: "Medical Outreaches", value: 52, suffix: "" },
-  { label: "Success Rate", value: 95, suffix: "%" },
 ] as const;
 
 export const values = [
