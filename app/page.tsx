@@ -100,11 +100,11 @@ const items = [
 ];
   return (
     <div className="border-y border-border bg-surface py-6 overflow-hidden">
-      <div className="flex animate-marquee gap-12 whitespace-nowrap">
+      <div className="flex w-max animate-marquee gap-6 sm:gap-12 whitespace-nowrap">
         {[...items, ...items, ...items].map((t, i) => (
           <span
             key={i}
-            className="flex items-center gap-12 font-serif text-2xl italic text-muted-foreground/60"
+            className="flex shrink-0 items-center gap-6 sm:gap-12 font-serif text-base sm:text-2xl italic text-muted-foreground/60"
           >
             {t}
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
