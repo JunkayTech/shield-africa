@@ -13,12 +13,11 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
       <Image
   src="/images/logo.png"
   alt="Shield Africa Logo"
-  width={110}
-  height={40}
-  className="object-contain"
-  style={{ width: "auto", height: "auto" }}
+  width={200}
+  height={80}
+  className="w-28 md:w-36 h-auto object-contain"
   priority
-    />
+/>
     </Link>
   );
 }
