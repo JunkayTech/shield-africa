@@ -182,4 +182,4 @@
 .animate-reveal { animation: reveal-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .animate-fade { animation: fade-in 1.2s ease-out both; }
 .animate-slow-zoom { animation: slow-zoom 18s ease-out both; }
-.animate-marquee { animation: marquee 10s linear infinite; }
+.animate-marquee { animation: marquee 15s linear infinite; }
