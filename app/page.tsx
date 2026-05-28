@@ -46,21 +46,14 @@ function Hero() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
-        <Reveal>
-         <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-3 backdrop-blur-md">
-            <Sparkles className="h-5 w-5 text-[#FF8C1A]" />
-
-              <span className="font-serif text-sm font-semibold uppercase tracking-[0.35em] text-white/90">
-                  Advancing
-              </span>
-          </div>
-        </Reveal>
 
         <Reveal delay={120}>
           <h1 className="mt-8 max-w-4xl font-serif text-5xl font-light leading-[1.02] text-white text-balance sm:text-7xl lg:text-[5.5rem]">
-            Sustainable
+            Advancing
             <br />
-            development across{" "}
+             <span className="italic text-accent"> Sustainable Development</span>
+             <br/>
+            Across{" "}
             <span className="italic text-accent">Africa.</span>
           </h1>
         </Reveal>
@@ -294,7 +287,7 @@ function UpcomingEvents() {
                     Friday, 29th May, 2026.
                   </p>
 
-                   <p>
+                  <p>
                     <span className="font-medium text-foreground">Time:</span>{" "}
                     4:00PM Prompt
                   </p>
