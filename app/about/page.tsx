@@ -14,14 +14,14 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[linear-gradient(135deg,oklch(0.18_0.04_210)_0%,oklch(0.32_0.07_195)_55%,oklch(0.22_0.05_200)_100%)] pt-40 pb-24 text-white sm:pt-48 sm:pb-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
-            <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-              About Shield Africa
-            </div>
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-orange-300">
+  About Shield Africa
+</div>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-6 max-w-4xl font-serif text-5xl font-light leading-[1.05] text-balance sm:text-7xl">
               We exist so that{" "}
-              <span className="italic text-primary">no community</span> is left
+              <span className="italic text-orange-300">no community</span> is left
               behind.
             </h1>
           </Reveal>
