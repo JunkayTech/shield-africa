@@ -13,8 +13,8 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
       <Image
   src="/images/logo.png"
   alt="Shield Africa Logo"
-  width={60}
-  height={60}
+  width={110}
+  height={40}
   className="object-contain"
   style={{ width: "auto", height: "auto" }}
   priority
