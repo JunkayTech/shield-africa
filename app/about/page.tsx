@@ -22,16 +22,8 @@ export default function AboutPage() {
             <h1 className="mt-6 max-w-4xl font-serif text-5xl font-light leading-[1.05] text-balance sm:text-7xl">
               We exist so that{" "}
               <span className="italic text-primary">no community</span> is left
-              behind by progress.
+              behind.
             </h1>
-          </Reveal>
-          <Reveal delay={240}>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Founded by a coalition of African development practitioners,
-              Shield Africa moves capital, expertise and dignity to the people
-              and places most often overlooked — and stays for the long arc of
-              change.
-            </p>
           </Reveal>
         </div>
       </section>

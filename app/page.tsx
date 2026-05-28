@@ -395,8 +395,8 @@ function Newsletter() {
                 Stay updated on impact stories from the field.
               </h2>
               <p className="mt-5 max-w-md text-base text-muted-foreground">
-               Stay updated with our programmes, community activities,
-development initiatives and upcoming events across Africa.
+              Stay updated with our programmes, community activities,
+              development initiatives and upcoming events across Africa.
               </p>
               <form
                 className="mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
