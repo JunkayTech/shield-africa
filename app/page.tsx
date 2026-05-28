@@ -95,7 +95,7 @@ const items = [
   "Education",
   "Gender Equality",
   "Humanitarian Aid",
-  "Youth & Women Inclusion",
+  "Youth Empowerment",
   "Climate Resilience",
 ];
   return (
