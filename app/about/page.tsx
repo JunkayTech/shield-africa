@@ -29,22 +29,24 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission split */}
-      <section className="border-y border-border bg-surface">
+      <section className="relative border-y border-white/10 bg-[linear-gradient(135deg,#0b2e2f_0%,#145c56_55%,#0f3d3e_100%)] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,170,70,0.12),transparent_35%)]" />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,170,70,0.08),transparent_40%)]" />
         <div className="mx-auto grid max-w-7xl gap-px bg-border md:grid-cols-2">
           <Reveal>
-            <div className="bg-surface p-10 sm:p-16">
+            <div className="bg-[#0f3d3e]/70 backdrop-blur-xl border border-white/10 p-10 sm:p-16">
               <div className="text-xs uppercase tracking-[0.18em] text-accent">
                 Vision
               </div>
               <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
                 We aim to be the {" "}
-                <span className="italic text-primary">largest solutions platform</span> has
+                <span className="italic text-accent">largest solutions platform</span> has
                 for the Sustainable Development Goals.
               </p>
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="bg-surface p-10 sm:p-16">
+            <div className="bg-[#0f3d3e]/70 backdrop-blur-xl border border-white/10 p-10 sm:p-16">
               <div className="text-xs uppercase tracking-[0.18em] text-accent">
                 Mission
               </div>
