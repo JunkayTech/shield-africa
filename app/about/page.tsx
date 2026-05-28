@@ -45,9 +45,9 @@ export default function AboutPage() {
                 Vision
               </div>
               <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
-                An Africa where{" "}
-                <span className="italic text-primary">every community</span> has
-                agency, capital, and capacity to thrive.
+                We aim to be the {" "}
+                <span className="italic text-primary">largest solutions platform</span> has
+                for the Sustainable Development Goals.
               </p>
             </div>
           </Reveal>
@@ -57,11 +57,11 @@ export default function AboutPage() {
                 Mission
               </div>
               <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
-                To advance{" "}
+                Our mission is to {" "}
                 <span className="italic text-primary">
-                  community-led, sustainable development
+                  contribute sustainable solutions 
                 </span>{" "}
-                through programs that build skills, livelihoods and resilience.
+                to global development problems in Africa through agricultural development, community empowerment, and strategic partnerships.
               </p>
             </div>
           </Reveal>

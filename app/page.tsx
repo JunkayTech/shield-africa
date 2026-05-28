@@ -47,9 +47,12 @@ function Hero() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
         <Reveal>
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-white/90 backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Advancing sustainable development across Africa.
+         <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-3 backdrop-blur-md">
+            <Sparkles className="h-5 w-5 text-[#FF8C1A]" />
+
+              <span className="font-serif text-sm font-semibold uppercase tracking-[0.35em] text-white/90">
+                  Advancing
+              </span>
           </div>
         </Reveal>
 
@@ -65,8 +68,8 @@ function Hero() {
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
             We design and implement impactful programmes that strengthen food systems,
-promote quality education and gender inclusion, improve livelihoods and
-support vulnerable populations.
+            promote quality education and gender inclusion, improve livelihoods and
+            support vulnerable populations.
           </p>
         </Reveal>
 
@@ -97,6 +100,7 @@ function Marquee() {
 const items = [
   "Agrifood Systems",
   "Education",
+  "Gender Equality",
   "Humanitarian Aid",
   "Youth & Women Inclusion",
   "Climate Resilience",
@@ -134,7 +138,7 @@ function Stats() {
               <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
                 Empowering communities through sustainable development
                 initiatives, humanitarian aid and capacity building programs
-                across Nigeria.
+                across Africa.
               </p>
               <Link
                 href="/impact"
@@ -174,7 +178,7 @@ function Programs() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
               <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-                Programs & Projects
+                Projects
               </div>
               <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
                 Built with communities, designed to last.
@@ -184,7 +188,7 @@ function Programs() {
               href="/impact"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-5 py-2.5 text-sm font-medium transition hover:bg-secondary"
             >
-              All programs <ArrowRight className="h-4 w-4" />
+              All projects <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </Reveal>
