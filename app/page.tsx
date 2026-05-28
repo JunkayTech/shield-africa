@@ -277,6 +277,13 @@ function UpcomingEvents() {
                   Sustainability Lab 2026 - MAY EDITION
                 </h3>
 
+                  <p>
+                    <span className="font-medium text-foreground">
+                      Topic:
+                    </span>{" "}
+                    Financial Intelligence and Profit Sustainability.
+                  </p>
+
                 <div className="mt-8 space-y-3 text-sm text-muted-foreground">
                   <p>
                     <span className="font-medium text-foreground">Date:</span>{" "}
@@ -294,13 +301,6 @@ function UpcomingEvents() {
                     SKYWIDE STUDIOS 2nd Floor, Blook B, A.R.O Plaza, 
                     2105 Herbert Macaulay Way, Wuse Zone 6
                     Abuja, Nigeria
-                  </p>
-
-                  <p>
-                    <span className="font-medium text-foreground">
-                      Theme:
-                    </span>{" "}
-                    Financial Intelligence and Profit Sustainability.
                   </p>
                 </div>
 
