@@ -51,9 +51,9 @@ function Hero() {
           <h1 className="mt-8 max-w-4xl font-serif text-5xl font-light leading-[1.02] text-white text-balance sm:text-7xl lg:text-[5.5rem]">
             Advancing
             <br />
-             <span className="italic text-accent"> Sustainable Development</span>
-             <br/>
-            Across{" "}
+            <span className="italic text-accent"> Sustainable Development</span>
+            <br/>
+            across{" "}
             <span className="italic text-accent">Africa.</span>
           </h1>
         </Reveal>
