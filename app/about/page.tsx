@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <PageLayout>
       {/* Intro */}
-      <section className="relative pt-40 pb-24 sm:pt-48 sm:pb-32">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,oklch(0.18_0.04_210)_0%,oklch(0.32_0.07_195)_55%,oklch(0.22_0.05_200)_100%)] pt-40 pb-24 text-white sm:pt-48 sm:pb-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
@@ -50,7 +50,7 @@ export default function AboutPage() {
               </div>
               <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
                 Our mission is to {" "}
-                <span className="italic text-primary">
+                <span className="italic text-accent">
                   contribute sustainable solutions 
                 </span>{" "}
                 to global development problems in Africa through agricultural development, community empowerment, and strategic partnerships.
@@ -61,7 +61,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-28 sm:py-36">
+      <section className="bg-[oklch(0.98_0.01_180)] py-28 sm:py-36">
         <div className="mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl">
@@ -115,7 +115,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-surface py-28 sm:py-36">
+      <section className="bg-[linear-gradient(to_bottom,oklch(0.97_0.01_180),white)] py-28 sm:py-36">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <div className="max-w-2xl">
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 90}>
-                <div className="group relative h-full rounded-3xl border border-border bg-surface-elevated p-8 transition hover:-translate-y-1 hover:shadow-elevated">
+                <div className="group relative h-full rounded-3xl border border-border bg-white/80 backdrop-blur p-8 transition hover:-translate-y-1 hover:shadow-elevated">
                   <div className="font-serif text-xl text-accent">
                     0{i + 1}
                   </div>
@@ -210,14 +210,14 @@ export default function AboutPage() {
         <Reveal>
           <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-primary-deep p-12 text-white sm:p-20">
             <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-accent/30 blur-3xl" />
+            <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
             <div className="relative grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
               <h2 className="font-serif text-4xl font-light leading-tight sm:text-5xl">
                 Walk with us on the next decade.
               </h2>
               <Link
                 href="/contact"
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-foreground"
-              >
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-foreground">
                 Become a partner <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
