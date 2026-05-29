@@ -34,11 +34,11 @@ export default function AboutPage() {
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,170,70,0.08),transparent_40%)]" />
         <div className="mx-auto grid max-w-7xl gap-px bg-border md:grid-cols-2">
           <Reveal>
-            <div className="bg-[#0f3d3e]/70 backdrop-blur-xl border border-white/10 p-10 sm:p-16">
+            <div className="bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_8px_40px_rgba(0,0,0,0.08)] p-10 sm:p-16">
               <div className="text-xs uppercase tracking-[0.18em] text-accent">
                 Vision
               </div>
-              <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
+              <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl text-cyan-950">
                 We aim to be the {" "}
                 <span className="italic text-accent">largest solutions platform</span> has
                 for the Sustainable Development Goals.
@@ -46,11 +46,11 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="bg-[#0f3d3e]/70 backdrop-blur-xl border border-white/10 p-10 sm:p-16">
+            <div className="bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_8px_40px_rgba(0,0,0,0.08)] p-10 sm:p-16">
               <div className="text-xs uppercase tracking-[0.18em] text-accent">
                 Mission
               </div>
-              <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl">
+              <p className="mt-6 font-serif text-2xl font-light leading-relaxed sm:text-3xl text-cyan-950">
                 Our mission is to {" "}
                 <span className="italic text-accent">
                   contribute sustainable solutions 
@@ -90,25 +90,34 @@ export default function AboutPage() {
                 Our Story
               </div>
               <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-                A decade of presence — not just programs.
+                Built From the Ground Up. Driven by Purpose
               </h2>
               <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
                 <p>
-                  Shield Africa began as a single rural literacy project in
-                  Benue State. A decade later we run integrated programming
-                  across agriculture, education, health, gender and
-                  humanitarian response — always with the same operating
-                  principle: communities lead, we resource.
+                  Shield Africa was established to create opportunities for
+                  underserved communities through agriculture, education,
+                  youth empowerment, gender inclusion, and humanitarian response.
                 </p>
                 <p>
-                  Our teams live in the regions they serve. Our grant making is
-                  audited. Our outcomes are measured against the goals
-                  communities set for themselves — not the assumptions of
-                  distant capitals.
+                  At the core of our approach is a simple but powerful belief that 
+                  sustainable development in Africa must be built with 
+                <span className="italic text-accent"> communities, not just for </span>
+                  them. We believe the most meaningful change happens when people are 
+                  empowered to lead their own transformation. So we work differently. 
+                  We sit at the table with 
+                  local leaders, not above them. We listen before we act. We learn from 
+                  the realities of the communities we serve. We invest in capacity building
+                  so communities do not just receive support, but develop the skills,
+                  confidence, and systems to sustain it. We build strategic partnerships
+                  that multiply impact and open new possibilities. We champion local
+                  ownership because the strongest solutions are the ones rooted in lived
+                  experience. We design with innovation, creating models that can grow, 
+                  adapt, and remain relevant as communities evolve.
                 </p>
                 <p>
-                  Today, that work touches more than 165,000 lives. Tomorrow,
-                  we intend to operate continent-wide on the same terms.
+                  Today, Shield Africa stands as a growing platform for sustainable
+                  development, connecting people, institutions, and partners to advance
+                  a more food-secure, empowered, and resilient Africa.
                 </p>
               </div>
             </div>
