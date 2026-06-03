@@ -15,54 +15,37 @@ for (let i = 1; i <= 34; i++) {
 export default function FarmersAcademyPage() {
   return (
     <PageLayout>
-      {/* HERO SECTION */}
-      <section className="relative min-h-screen overflow-hidden">
-        <Image
-          src="/images/projects/farmers/banner.jpg"
-          alt="Farmers Academy"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 flex min-h-screen items-center">
-          <div className="mx-auto max-w-7xl px-6">
-            <Reveal>
-              <div className="max-w-3xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Agricultural Development Initiative
-                </span>
-                <h1 className="mt-6 font-serif text-6xl font-light text-white md:text-8xl">
-                  Farmers'
-                  <span className="block text-accent">Academy</span>
-                </h1>
-                <p className="mt-6 text-xl leading-9 text-white/90">
-                  Empowering farmers through practical training,
-                  climate-smart agriculture, agribusiness development,
-                  and sustainable food production systems.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a
-                    href="#gallery"
-                    className="rounded-full bg-primary-deep px-8 py-4 font-medium text-white"
-                  >
-                    Explore Gallery
-                  </a>
-                  <a
-                    href="#impact"
-                    className="rounded-full border border-white px-8 py-4 font-medium text-white"
-                  >
-                    View Impact
-                  </a>
-                </div>
-                <div className="mt-8 inline-block rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
-                  📸 34 Project Photos Available
-                </div>
-              </div>
-            </Reveal>
-          </div>
+     {/* HERO SECTION */}
+<section className="relative min-h-screen overflow-hidden pt-24 sm:pt-32">
+  <Image
+    src="/images/projects/farmers/banner.jpg"
+    alt="Farmers Academy"
+    fill
+    priority
+    className="object-cover"
+  />
+  <div className="absolute inset-0 bg-black/60" />
+  <div className="relative z-10 flex min-h-screen items-center">
+    <div className="mx-auto max-w-7xl px-6">
+      <Reveal>
+        <div className="max-w-3xl">
+          <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
+            Agricultural Development Initiative
+          </span>
+          <h1 className="mt-6 font-serif text-6xl font-light text-white md:text-8xl">
+            Farmers'
+            <span className="block text-accent">Academy</span>
+          </h1>
+          <p className="mt-6 text-xl leading-9 text-white/90">
+            Empowering farmers through practical training,
+            climate-smart agriculture, agribusiness development,
+            and sustainable food production systems.
+          </p>
         </div>
-      </section>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       {/* IMPACT CARDS */}
       <section id="impact" className="-mt-20 relative z-20">
@@ -141,7 +124,6 @@ export default function FarmersAcademyPage() {
         </div>
       </section>
 
-      ```tsx
 {/* GALLERY */}
 <section id="gallery" className="mx-auto max-w-7xl px-6 py-20">
   <Reveal>
