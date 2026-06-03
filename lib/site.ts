@@ -17,7 +17,7 @@ export const programs = [
     description:
       "Catalytic financing, mentorship and equipment access for first-time agribusiness founders under 35.",
     image: "agripreneur",
-    caseStudyUrl: "/impact/case-studies/young-agripreneur",
+    caseStudyUrl: "/impact/case-studies/young-agripreneur-financing"
   },
   {
     slug: "dry-season-rice",
