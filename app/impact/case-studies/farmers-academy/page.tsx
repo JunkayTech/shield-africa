@@ -15,8 +15,8 @@ for (let i = 1; i <= 34; i++) {
 export default function FarmersAcademyPage() {
   return (
     <PageLayout>
-     {/* HERO SECTION */}
-<section className="relative min-h-screen overflow-hidden pt-24 sm:pt-32">
+  {/* HERO SECTION */}
+<section className="relative min-h-screen overflow-hidden pt-16 sm:pt-24">
   <Image
     src="/images/projects/farmers/banner.jpg"
     alt="Farmers Academy"
