@@ -204,6 +204,7 @@ const imageMap: Record<string, string> = {
   medical: "/images/medical.jpg",
   women: "/images/women.jpg",
   humanitarian: "/images/humanitarian.jpg",
+  agripreneur: "/images/agri-preneur.jpg",
 };
 
 export function ProgramCard({ program }: { program: Program }) {

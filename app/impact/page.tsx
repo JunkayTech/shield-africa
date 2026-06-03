@@ -8,11 +8,12 @@ import { Reveal, Counter } from "@/components/reveal";
 import { programs, stats, type Program } from "@/lib/site";
 
 const imageMap: Record<string, string> = {
-  agriculture: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
-  education: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
-  medical: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-  women: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
-  humanitarian: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+agriculture: "/images/agriculture.jpg",
+  education: "/images/education.jpg",
+  medical: "/images/medical.jpg",
+  women: "/images/women.jpg",
+  humanitarian: "/images/humanitarian.jpg",
+  agripreneur: "/images/agri-preneur.jpg",
 };
 
 export default function ImpactPage() {
@@ -197,10 +198,13 @@ function ProgramCard({ program }: { program: Program }) {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           {program.description}
         </p>
-        <div className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium">
-          <span className="text-foreground">Read case study</span>
-          <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
-        </div>
+      <Link
+  href={program.caseStudyUrl}
+  className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium"
+>
+  <span className="text-foreground">Read case study</span>
+  <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
+      </Link>
       </div>
     </article>
   );

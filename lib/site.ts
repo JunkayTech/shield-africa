@@ -7,15 +7,17 @@ export const programs = [
     description:
       "A flagship residential training program equipping smallholder farmers with climate-smart agronomy, financial literacy and market linkages.",
     image: "agriculture",
+    caseStudyUrl: "/impact/case-studies/farmers-academy",
   },
   {
     slug: "young-agripreneur",
     title: "Young Agri-preneur Financing Project",
-    category: "Agriculture",
+    category: "Agri-preneur",
     location: "Pan-Nigeria",
     description:
       "Catalytic financing, mentorship and equipment access for first-time agribusiness founders under 35.",
-    image: "agriculture",
+    image: "agripreneur",
+    caseStudyUrl: "/impact/case-studies/young-agripreneur",
   },
   {
     slug: "dry-season-rice",
@@ -24,7 +26,8 @@ export const programs = [
     location: "Oju, Benue State",
     description:
       "Irrigation infrastructure and improved seed varieties enabling year-round rice production for 2,400 households.",
-    image: "agriculture",
+    image: "rice_farming",
+    caseStudyUrl: "/impact/case-studies/dry-season-rice",
   },
   {
     slug: "ichwa-idp",
@@ -34,6 +37,7 @@ export const programs = [
     description:
       "Food, dignity kits and psychosocial support delivered to internally displaced families in conflict-affected camps.",
     image: "humanitarian",
+    caseStudyUrl: "/impact/case-studies/ichwa-idp",
   },
   {
     slug: "school-for-the-blind",
@@ -43,6 +47,7 @@ export const programs = [
     description:
       "Braille learning materials, assistive devices and teacher upskilling at the Federal Nursery & Primary School for the Blind.",
     image: "education",
+    caseStudyUrl: "/impact/case-studies/school-for-the-blind",
   },
   {
     slug: "naka-farming",
@@ -52,6 +57,7 @@ export const programs = [
     description:
       "Community-owned cooperative model unlocking shared inputs, storage and offtake for 600 farmers.",
     image: "agriculture",
+    caseStudyUrl: "/impact/case-studies/naka-farming",
   },
   {
     slug: "jeje-outreach",
@@ -61,6 +67,7 @@ export const programs = [
     description:
       "Integrated WASH, nutrition and child welfare programming for under-served rural communities.",
     image: "humanitarian",
+    caseStudyUrl: "/impact/case-studies/jeje-outreach",
   },
   {
     slug: "pagi-medical",
@@ -70,6 +77,7 @@ export const programs = [
     description:
       "Free primary care, screenings and essential medicines reaching 1,800 patients in a single mobilization.",
     image: "medical",
+    caseStudyUrl: "/impact/case-studies/pagi-medical",
   },
   {
     slug: "vaw-campaign",
@@ -79,6 +87,7 @@ export const programs = [
     description:
       "Survivor support networks, legal aid and community dialogue confronting GBV across at-risk communities.",
     image: "women",
+    caseStudyUrl: "/impact/case-studies/vaw-campaign",
   },
 ] as const;
 
