@@ -128,6 +128,80 @@ export default function YoungAgripreneurPage() {
         </div>
       </section>
 
+<section className="mx-auto max-w-7xl px-6 py-16">
+  <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
+
+    <h2 className="font-serif text-4xl font-light text-primary">
+      Browse Case Studies
+    </h2>
+
+    <p className="mt-3 text-muted-foreground">
+      Explore our featured projects and success stories.
+    </p>
+
+    <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+      <Link
+        href="/impact/case-studies/farmers-academy"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        Farmers Academy
+      </Link>
+
+      <Link
+  href="/impact/case-studies/young-agripreneur-financing"
+  className="rounded-2xl bg-primary text-white p-4"
+>
+        Young Agri-preneur Financing
+      </Link>
+
+      <Link
+        href="/impact/case-studies/dry-season-rice-farming"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        Dry Season Rice Farming
+      </Link>
+
+      <Link
+        href="/impact/case-studies/school-for-the-blind"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        School for the Blind
+      </Link>
+
+      <Link
+        href="/impact/case-studies/naka-farming-project"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        Naka Farming Project
+      </Link>
+
+      <Link
+        href="/impact/case-studies/jeje-outreach-project"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        Jeje Outreach Project
+      </Link>
+
+      <Link
+        href="/impact/case-studies/pagi-medical-outreach"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        Pagi Medical Outreach
+      </Link>
+
+      <Link
+        href="/impact/case-studies/vaw-campaign"
+        className="rounded-2xl border border-border p-4 transition hover:bg-primary hover:text-white"
+      >
+        VAW Campaign
+      </Link>
+
+    </div>
+  </div>
+</section>
+
+
       {/* OVERVIEW */}
       <section className="mx-auto max-w-7xl px-6 py-28">
         <div className="grid gap-16 lg:grid-cols-2">
