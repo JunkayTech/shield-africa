@@ -36,7 +36,7 @@ export default function PagiMedicalOutreachPage() {
   return (
     <PageLayout>
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden pb-8">
         <Image
           src="/images/projects/pagi-medical-outreach/banner.jpg"
           alt="Pagi Medical Outreach"
@@ -80,7 +80,7 @@ export default function PagiMedicalOutreachPage() {
                   </a>
                 </div>
 
-                <div className="mt-8 inline-block rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
+                <div className="mt-8 inline-block rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur relative z-30">
                   📸 10 Project Photos Available
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function PagiMedicalOutreachPage() {
       </section>
 
       {/* IMPACT CARDS */}
-      <section id="impact" className="-mt-20 relative z-20">
+      <section id="impact" className="-mt-12 relative z-10 lg:z-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
             <Reveal>
