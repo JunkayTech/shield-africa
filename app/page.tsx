@@ -359,7 +359,8 @@ function Testimonials() {
             </h2>
           </div>
         </Reveal>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        {/* Change grid to 2 columns on md+ screens */}
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {items.map((t, i) => (
             <Reveal key={i} delay={i * 100}>
               <figure className="flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">

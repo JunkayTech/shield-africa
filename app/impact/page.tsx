@@ -43,25 +43,26 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* Stats dashboard */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-4">
-            {stats.map((s, i) => (
-              <Reveal key={s.label} delay={i * 40}>
-                <div className="h-full bg-surface-elevated p-7">
-                  <div className="font-serif text-4xl font-light sm:text-5xl">
-                    <Counter to={s.value} suffix={s.suffix} />
-                  </div>
-                  <div className="mt-3 text-sm text-muted-foreground">
-                    {s.label}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+{/* Stats dashboard */}
+<section className="bg-surface py-20">
+  <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-3">
+      {stats.map((s, i) => (
+        <Reveal key={s.label} delay={i * 40}>
+          <div className="h-full bg-surface-elevated p-7">
+            <div className="font-serif text-4xl font-light sm:text-5xl">
+              <Counter to={s.value} suffix={s.suffix} />
+            </div>
+            <div className="mt-3 text-sm text-muted-foreground">
+              {s.label}
+            </div>
           </div>
-        </div>
-      </section>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Featured case studies */}
       <section className="py-28 sm:py-36">

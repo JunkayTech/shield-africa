@@ -46,7 +46,7 @@ const nav = [
       },
       {
         label: "Pagi Medical Outreach",
-        href: "/impact/case-studies/pagi-medical-outreach",
+        href: "/impact/case-studies/pagi-medical",
       },
       {
         label: "VAW Campaign",
