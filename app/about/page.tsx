@@ -120,7 +120,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our SDGs (mixed visual icons used by many NGOs) */}
+      {/* Our SDGs */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
@@ -135,15 +135,10 @@ export default function AboutPage() {
           </Reveal>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Use mixed visual SDG assets (combined icon + color + label) */}
+            {/* Each SDG uses an image placeholder path for UN SDG icons */}
             <Reveal delay={60}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg1-mixed.svg"
-                  alt="SDG1 No Poverty mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg1.png" alt="SDG1 No Poverty" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG1</div>
                   <div className="text-sm text-muted-foreground">No Poverty</div>
@@ -153,12 +148,7 @@ export default function AboutPage() {
 
             <Reveal delay={120}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg2-mixed.svg"
-                  alt="SDG2 Zero Hunger mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg2.png" alt="SDG2 Zero Hunger" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG2</div>
                   <div className="text-sm text-muted-foreground">Zero Hunger</div>
@@ -168,12 +158,7 @@ export default function AboutPage() {
 
             <Reveal delay={180}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg4-mixed.svg"
-                  alt="SDG4 Quality Education mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg4.png" alt="SDG4 Quality Education" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG4</div>
                   <div className="text-sm text-muted-foreground">Quality Education</div>
@@ -183,12 +168,7 @@ export default function AboutPage() {
 
             <Reveal delay={240}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg5-mixed.svg"
-                  alt="SDG5 Gender Equality mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg5.png" alt="SDG5 Gender Equality" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG5</div>
                   <div className="text-sm text-muted-foreground">Gender Equality</div>
@@ -198,12 +178,7 @@ export default function AboutPage() {
 
             <Reveal delay={300}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg13-mixed.svg"
-                  alt="SDG13 Climate Action mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg13.png" alt="SDG13 Climate Action" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG13</div>
                   <div className="text-sm text-muted-foreground">Climate Action</div>
@@ -213,12 +188,7 @@ export default function AboutPage() {
 
             <Reveal delay={360}>
               <div className="flex items-center gap-4 rounded-2xl border border-border p-4">
-                <Image
-                  src="/images/sdgs/mixed/sdg17-mixed.svg"
-                  alt="SDG17 Partnerships for the Goals mixed visual"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/images/sdgs/sdg17.png" alt="SDG17 Partnerships for the Goals" width={56} height={56} />
                 <div>
                   <div className="font-medium">SDG17</div>
                   <div className="text-sm text-muted-foreground">Partnerships for the Goals</div>
