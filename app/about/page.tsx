@@ -103,8 +103,9 @@ export default function AboutPage() {
 
                 <p>
                   At the core of our approach is a simple but powerful belief that
-                  sustainable development in Africa must be built with{" "}
-                  <span className="italic text-accent">communities, not just for</span>{" "}
+                  sustainable development in Africa must be built {" "}
+                  <span className="italic text-accent">with</span>{" "} communities, not just {" "}
+                  <span className="italic text-accent">for</span>{" "}
                   them. We believe the most meaningful change happens when people are
                   empowered to lead their own transformation. So we work differently.
                 </p>
@@ -328,39 +329,6 @@ export default function AboutPage() {
                 </p>
               </article>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="bg-[linear-gradient(to_bottom,oklch(0.97_0.01_180),white)] py-28 sm:py-36">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <Reveal>
-            <div className="max-w-2xl">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">
-                Core Values
-              </div>
-              <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-                The principles we hold each other to.
-              </h2>
-            </div>
-          </Reveal>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 90}>
-                <div className="group relative h-full rounded-3xl border border-border bg-white/80 backdrop-blur p-8 transition hover:-translate-y-1 hover:shadow-elevated">
-                  <div className="font-serif text-xl text-accent">
-                    0{i + 1}
-                  </div>
-                  <h3 className="mt-6 font-serif text-2xl font-medium">
-                    {v.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {v.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>

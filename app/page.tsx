@@ -60,9 +60,7 @@ function Hero() {
 
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            We design and implement impactful programmes that strengthen food systems,
-            promote quality education and gender inclusion, improve livelihoods and
-            support vulnerable populations.
+            We design and implement impactful programmes that strengthen food systems, promote quality education, gender inclusion, and improve livelihoods.
           </p>
         </Reveal>
 
