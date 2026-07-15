@@ -8,7 +8,7 @@ import { Reveal, Counter } from "@/components/reveal";
 import { programs, stats, type Program } from "@/lib/site";
 
 const imageMap: Record<string, string> = {
-agriculture: "/images/agriculture.jpg",
+  agriculture: "/images/agriculture.jpg",
   education: "/images/education.jpg",
   medical: "/images/medical.jpg",
   women: "/images/women.jpg",
@@ -17,9 +17,9 @@ agriculture: "/images/agriculture.jpg",
 };
 
 export default function ImpactPage() {
-  const featured = programs.slice(0, 3);
   return (
     <PageLayout>
+      {/* Hero */}
       <section className="relative pt-40 pb-20 sm:pt-48 sm:pb-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
@@ -43,95 +43,27 @@ export default function ImpactPage() {
         </div>
       </section>
 
-{/* Stats dashboard */}
-<section className="bg-surface py-20">
-  <div className="mx-auto max-w-7xl px-5 sm:px-8">
-    <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-3">
-      {stats.map((s, i) => (
-        <Reveal key={s.label} delay={i * 40}>
-          <div className="h-full bg-surface-elevated p-7">
-            <div className="font-serif text-4xl font-light sm:text-5xl">
-              <Counter to={s.value} suffix={s.suffix} />
-            </div>
-            <div className="mt-3 text-sm text-muted-foreground">
-              {s.label}
-            </div>
-          </div>
-        </Reveal>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-      {/* Featured case studies */}
-      <section className="py-28 sm:py-36">
+      {/* Stats dashboard */}
+      <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <Reveal>
-            <div className="max-w-2xl">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">
-                Case Studies
-              </div>
-              <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-                Three programs. Three theories of change.
-              </h2>
-            </div>
-          </Reveal>
-          <div className="mt-16 space-y-20">
-            {featured.map((p, i) => (
-              <Reveal key={p.slug} delay={80}>
-                <article
-                  className={`grid gap-10 lg:grid-cols-2 lg:items-center ${
-                    i % 2 === 1 ? "lg:[&>:first-child]:order-2" : ""
-                  }`}
-                >
-                  <div className="relative overflow-hidden rounded-3xl">
-                    <Image
-                      src={imageMap[p.image] || imageMap.agriculture}
-                      alt={p.title}
-                      width={640}
-                      height={512}
-                      className="aspect-[5/4] w-full object-cover"
-                    />
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-3">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 40}>
+                <div className="h-full bg-surface-elevated p-7">
+                  <div className="font-serif text-4xl font-light sm:text-5xl">
+                    <Counter to={s.value} suffix={s.suffix} />
                   </div>
-                  <div>
-                    <span className="inline-flex rounded-full bg-accent/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.15em] text-accent-foreground">
-                      {p.category}
-                    </span>
-                    <h3 className="mt-5 font-serif text-3xl font-light leading-tight sm:text-4xl">
-                      {p.title}
-                    </h3>
-                    <div className="mt-3 inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" /> {p.location}
-                    </div>
-                    <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                      {p.description}
-                    </p>
-                    <div className="mt-8 grid grid-cols-3 gap-6 border-t border-border pt-6">
-                      {[
-                        { v: "12K+", l: "Direct beneficiaries" },
-                        { v: "94%", l: "Retention" },
-                        { v: "3.2x", l: "Income uplift" },
-                      ].map((m) => (
-                        <div key={m.l}>
-                          <div className="font-serif text-2xl font-light">
-                            {m.v}
-                          </div>
-                          <div className="mt-1 text-xs text-muted-foreground">
-                            {m.l}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="mt-3 text-sm text-muted-foreground">
+                    {s.label}
                   </div>
-                </article>
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Full portfolio */}
+      {/* Project Portfolio (all projects) */}
       <section className="bg-surface py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
@@ -154,6 +86,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="px-5 py-16 sm:px-8">
         <Reveal>
           <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-primary p-12 text-primary-foreground sm:p-16">
@@ -199,13 +132,13 @@ function ProgramCard({ program }: { program: Program }) {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           {program.description}
         </p>
-      <Link
-  href={program.caseStudyUrl}
-  className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium"
->
-  <span className="text-foreground">Read case study</span>
-  <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
-      </Link>
+        <Link
+          href={program.caseStudyUrl}
+          className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium"
+        >
+          <span className="text-foreground">Read case study</span>
+          <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
+        </Link>
       </div>
     </article>
   );
