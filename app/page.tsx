@@ -185,7 +185,7 @@ function Programs() {
         </Reveal>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {programs.slice(0, 6).map((p, i) => (
+          {programs.slice(0, 3).map((p, i) => (
             <Reveal key={p.slug} delay={(i % 3) * 80}>
               <ProgramCard program={p} />
             </Reveal>
