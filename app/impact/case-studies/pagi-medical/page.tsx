@@ -71,17 +71,6 @@ export default function PagiMedicalOutreachPage() {
                   >
                     Explore Gallery
                   </a>
-
-                  <a
-                    href="#impact"
-                    className="rounded-full border border-white px-8 py-4 font-medium text-white"
-                  >
-                    View Impact
-                  </a>
-                </div>
-
-                <div className="mt-8 inline-block rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur relative z-30">
-                  📸 10 Project Photos Available
                 </div>
               </div>
             </Reveal>
@@ -131,10 +120,6 @@ export default function PagiMedicalOutreachPage() {
       {/* CASE STUDIES NAV */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
-          <h2 className="font-serif text-4xl font-light text-primary">
-            Browse Case Studies
-          </h2>
-
           <p className="mt-3 text-muted-foreground">
             Explore our featured projects and success stories.
           </p>
@@ -260,11 +245,11 @@ export default function PagiMedicalOutreachPage() {
       <section className="bg-primary-deep py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <Reveal>
-            <h2 className="font-serif text-5xl font-light">Support Pagi Medical Outreach</h2>
+            <h2 className="font-serif text-5xl font-light">Partner with Shield Africa</h2>
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-6 text-xl text-white/90">
-              Partner with us to expand medical access and strengthen community health.
+              Together we can empower more farmers and strengthen food security.
             </p>
           </Reveal>
           <Reveal delay={240}>

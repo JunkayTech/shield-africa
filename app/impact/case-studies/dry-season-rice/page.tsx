@@ -76,18 +76,7 @@ export default function DrySeasonRicePage() {
                   >
                     Explore Gallery
                   </a>
-
-                  <a
-                    href="#impact"
-                    className="rounded-full border border-white px-8 py-4 font-medium text-white"
-                  >
-                    View Impact
-                  </a>
-                </div>
-
-                <div className="mt-8 inline-block rounded-full bg-white/10 px-5 py-3 text-white backdrop-blur">
-                  📸 76 Project Photos Available
-                </div>
+                  </div>
               </div>
             </Reveal>
           </div>
@@ -144,9 +133,6 @@ export default function DrySeasonRicePage() {
         {/* CASE STUDIES NAV */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
-          <h2 className="font-serif text-4xl font-light text-primary">
-            Browse Case Studies
-          </h2>
           <p className="mt-3 text-muted-foreground">
             Explore our featured projects and success stories.
           </p>

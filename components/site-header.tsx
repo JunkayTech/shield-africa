@@ -30,7 +30,7 @@ const nav = [
       },
       {
         label: "Dry Season Rice Farming",
-        href: "/impact/case-studies/dry-season-rice-farming",
+        href: "/impact/case-studies/dry-season-rice",
       },
       {
         label: "School for the Blind",
