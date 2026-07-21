@@ -85,31 +85,31 @@ export default function PagiMedicalOutreachPage() {
             <Reveal>
               <div className="text-center">
                 <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">4,500+</h3>
-                <p className="text-muted-foreground">Patients Served</p>
+                <h3 className="font-serif text-4xl font-medium text-primary">500+</h3>
+                <p className="text-muted-foreground">Beneficiaries Served</p>
               </div>
             </Reveal>
 
             <Reveal delay={90}>
               <div className="text-center">
                 <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">22</h3>
-                <p className="text-muted-foreground">Communities Reached</p>
+                <h3 className="font-serif text-4xl font-medium text-primary">15+</h3>
+                <p className="text-muted-foreground">Health Professionals Engaged</p>
               </div>
             </Reveal>
 
             <Reveal delay={180}>
               <div className="text-center">
                 <Briefcase className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">1,200+</h3>
-                <p className="text-muted-foreground">Treatments & Referrals</p>
+                <h3 className="font-serif text-4xl font-medium text-primary">25+</h3>
+                <p className="text-muted-foreground">Referred for Further Care</p>
               </div>
             </Reveal>
 
             <Reveal delay={270}>
               <div className="text-center">
                 <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">78%</h3>
+                <h3 className="font-serif text-4xl font-medium text-primary">85%</h3>
                 <p className="text-muted-foreground">Improved Health Outcomes</p>
               </div>
             </Reveal>

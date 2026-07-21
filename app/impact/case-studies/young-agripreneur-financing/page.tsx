@@ -58,9 +58,9 @@ export default function YoungAgripreneurPage() {
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Young
                   <span className="block text-accent">
-                    Agri-preneur Financing
+                    Agribusiness Financing
                   </span>
-                  Project
+                  Programme
                 </h1>
 
                 <p className="mt-6 text-xl leading-9 text-white/90">
@@ -84,6 +84,7 @@ export default function YoungAgripreneurPage() {
       </section>
 
       {/* IMPACT CARDS */}
+      {/*
       <section id="impact" className="-mt-12 relative z-10 lg:z-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
@@ -129,6 +130,7 @@ export default function YoungAgripreneurPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CASE STUDIES NAV */}
       <section className="mx-auto max-w-7xl px-6 py-16">

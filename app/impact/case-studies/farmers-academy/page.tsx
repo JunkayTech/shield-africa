@@ -75,29 +75,29 @@ export default function FarmersAcademyPage() {
             <Reveal>
               <div className="text-center">
                 <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">500+</h3>
+                <h3 className="font-serif text-4xl font-medium text-primary">1000+</h3>
                 <p className="text-muted-foreground">Farmers Trained</p>
               </div>
             </Reveal>
             <Reveal delay={90}>
               <div className="text-center">
                 <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">25+</h3>
+                <h3 className="font-serif text-4xl font-medium text-primary">13+</h3>
                 <p className="text-muted-foreground">Communities Reached</p>
               </div>
             </Reveal>
             <Reveal delay={180}>
               <div className="text-center">
                 <Sprout className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">80%</h3>
-                <p className="text-muted-foreground">Yield Increase</p>
+                <h3 className="font-serif text-4xl font-medium text-primary">75%+</h3>
+                <p className="text-muted-foreground">Adoption Rate</p>
               </div>
             </Reveal>
             <Reveal delay={270}>
               <div className="text-center">
                 <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">₦50M+</h3>
-                <p className="text-muted-foreground">Economic Value Created</p>
+                <h3 className="font-serif text-4xl font-medium text-primary">35%+</h3>
+                <p className="text-muted-foreground">Yield Increase</p>
               </div>
             </Reveal>
           </div>
