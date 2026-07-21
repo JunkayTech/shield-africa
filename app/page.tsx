@@ -256,7 +256,7 @@ function UpcomingEvents() {
               
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/sustainability_lab_july.png"
+                  src="/images/events/sustainability_lab_july.png"
                   alt="Sustainability Lab Event"
                   width={1200}
                   height={800}

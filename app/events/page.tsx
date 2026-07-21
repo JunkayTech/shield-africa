@@ -2,18 +2,55 @@
 
 import { useState } from "react";
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
-import { events } from "@/lib/site";
 
-const types = ["All", "Training", "Outreach", "Convening", "Community"] as const;
+const types = ["Upcoming", "Past"] as const;
 
 export default function EventsPage() {
-  const [filter, setFilter] = useState<(typeof types)[number]>("All");
-  const filtered = events.filter((e) => filter === "All" || e.type === filter);
+  const [filter, setFilter] = useState<(typeof types)[number]>("Upcoming");
+
+  // Hard-coded events with thumbnails
+  const upcomingEvents = [
+    {
+      title: "Sustainability Lab",
+      date: "Friday, 29th May, 2026",
+      location: "Abuja, Nigeria",
+      body: "An interactive lab exploring financial intelligence and profit sustainability.",
+      thumbnail: "/images/events/thumbnail_july.png",
+    },
+  ];
+
+  const pastEvents = [
+    {
+      title: "Shield Africa Summit 2024",
+      date: "March 2024",
+      location: "Abuja, Nigeria",
+      body: "Annual summit convening partners and communities.",
+      thumbnail: "/images/events/summit2024.jpg",
+    },
+    {
+      title: "Shield Africa Summit 2025",
+      date: "March 2025",
+      location: "Abuja, Nigeria",
+      body: "Annual summit convening partners and communities.",
+      thumbnail: "/images/events/summit2025.jpg",
+    },
+    {
+      title: "Green Insight Launch 2024/2025",
+      date: "2024–2025",
+      location: "Abuja, Nigeria",
+      body: "Launch of Green Insight initiative for sustainable development.",
+      thumbnail: "/images/events/green_insight.jpg",
+    },
+  ];
+
+  const filtered = filter === "Upcoming" ? upcomingEvents : pastEvents;
 
   return (
     <PageLayout>
+      {/* Hero */}
       <section className="relative pt-40 pb-20 sm:pt-48 sm:pb-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
@@ -29,11 +66,11 @@ export default function EventsPage() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Trainings, outreaches, convenings and community programs — open
-              to partners, volunteers and the communities we serve.
+              Trainings, convenings and summits — open to partners, volunteers and the communities we serve.
             </p>
           </Reveal>
 
+          {/* Filter buttons */}
           <Reveal delay={320}>
             <div className="mt-12 flex flex-wrap gap-2">
               {types.map((t) => (
@@ -54,6 +91,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Events list */}
       <section className="pb-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="overflow-hidden rounded-3xl border border-border bg-surface-elevated">
@@ -64,16 +102,22 @@ export default function EventsPage() {
                     i !== filtered.length - 1 ? "border-b border-border" : ""
                   }`}
                 >
+                  {/* Thumbnail */}
+                  <div className="relative h-32 w-full sm:h-40 sm:w-40 overflow-hidden rounded-xl">
+                    <Image
+                      src={e.thumbnail}
+                      alt={e.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Event details */}
                   <div>
                     <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-primary">
                       <Calendar className="h-3.5 w-3.5" /> {e.date}
                     </div>
-                    <div className="mt-3 inline-flex rounded-full bg-accent/15 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-accent-foreground">
-                      {e.type}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-2xl font-medium leading-snug sm:text-3xl">
+                    <h3 className="mt-3 font-serif text-2xl font-medium leading-snug sm:text-3xl">
                       {e.title}
                     </h3>
                     <div className="mt-2 inline-flex items-center gap-1.5 text-sm text-muted-foreground">
@@ -83,13 +127,21 @@ export default function EventsPage() {
                       {e.body}
                     </p>
                   </div>
-                  <a
-                    href="#register"
-                    className="inline-flex items-center gap-1.5 self-start rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium transition group-hover:border-foreground group-hover:bg-foreground group-hover:text-background sm:self-center"
-                  >
-                    Register
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
+
+                  {/* Register button */}
+                  {filter === "Upcoming" ? (
+                    <a
+                      href="#register"
+                      className="inline-flex items-center gap-1.5 self-start rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium transition group-hover:border-foreground group-hover:bg-foreground group-hover:text-background sm:self-center"
+                    >
+                      Register
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 self-start rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium line-through text-muted-foreground sm:self-center">
+                      Register
+                    </span>
+                  )}
                 </article>
               </Reveal>
             ))}
@@ -97,6 +149,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* Registration form */}
       <section id="register" className="px-5 pb-32 sm:px-8">
         <Reveal>
           <div className="mx-auto grid max-w-7xl gap-10 rounded-3xl border border-border bg-surface p-10 sm:p-16 lg:grid-cols-[1fr_1.2fr]">
