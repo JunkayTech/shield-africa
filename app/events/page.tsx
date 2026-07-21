@@ -15,9 +15,9 @@ export default function EventsPage() {
   const upcomingEvents = [
     {
       title: "Sustainability Lab",
-      date: "Friday, 29th May, 2026",
+      date: "Friday, 31st July, 2026",
       location: "Abuja, Nigeria",
-      body: "An interactive lab exploring financial intelligence and profit sustainability.",
+      body: "An interactive Leadership and Ethnical Decision-Making For Business Resilience. ",
       thumbnail: "/images/events/thumbnail_july.png",
     },
   ];
