@@ -256,7 +256,7 @@ function UpcomingEvents() {
               
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/sustainability_lab.jpg"
+                  src="/images/sustainability_lab_july.png"
                   alt="Sustainability Lab Event"
                   width={1200}
                   height={800}
@@ -270,20 +270,20 @@ function UpcomingEvents() {
                 </div>
 
                 <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
-                  Sustainability Lab 2026 - MAY EDITION
+                  Sustainability Lab 2026 - JULY EDITION
                 </h3>
 
                   <p>
                     <span className="font-medium text-foreground">
                       Topic:
                     </span>{" "}
-                    Financial Intelligence and Profit Sustainability.
+                    Leadership and Ethical Decision-making for Business Resilience.
                   </p>
 
                 <div className="mt-8 space-y-3 text-sm text-muted-foreground">
                   <p>
                     <span className="font-medium text-foreground">Date:</span>{" "}
-                    Friday, 29th May, 2026.
+                    Friday, 31st July, 2026.
                   </p>
 
                   <p>
