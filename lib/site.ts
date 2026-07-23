@@ -6,7 +6,7 @@ export const programs = [
     location: "Nationwide, Nigeria",
     description:
       "A flagship residential training program equipping smallholder farmers with climate-smart agronomy, financial literacy and market linkages.",
-    image: "agriculture",
+    image: "farmers_academy",
     caseStudyUrl: "/impact/case-studies/farmers-academy",
   },
   {
@@ -56,7 +56,7 @@ export const programs = [
     location: "Benue State",
     description:
       "Community-owned cooperative model unlocking shared inputs, storage and offtake for 600 farmers.",
-    image: "agriculture",
+    image: "farming",
     caseStudyUrl: "/impact/case-studies/naka-farming",
   },
   {
@@ -66,7 +66,7 @@ export const programs = [
     location: "Nasarawa State",
     description:
       "Integrated WASH, nutrition and child welfare programming for under-served rural communities.",
-    image: "humanitarian",
+    image: "outreach",
     caseStudyUrl: "/impact/case-studies/jeje-outreach",
   },
   {

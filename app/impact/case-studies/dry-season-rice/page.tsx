@@ -131,6 +131,7 @@ export default function DrySeasonRicePage() {
       </section>
 
         {/* CASE STUDIES NAV */}
+      {/*
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
           <p className="mt-3 text-muted-foreground">
@@ -157,6 +158,7 @@ export default function DrySeasonRicePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* OVERVIEW */}
       <section className="mx-auto max-w-7xl px-6 py-28">

@@ -56,7 +56,7 @@ export default function YoungAgripreneurPage() {
                 </span>
 
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
-                  Young
+                  Youth
                   <span className="block text-accent">
                     Agribusiness Financing
                   </span>
@@ -133,7 +133,7 @@ export default function YoungAgripreneurPage() {
       */}
 
       {/* CASE STUDIES NAV */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      {/* <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
           <p className="mt-3 text-muted-foreground">
             Explore our featured projects and success stories.
@@ -159,7 +159,8 @@ export default function YoungAgripreneurPage() {
           </div>
         </div>
       </section>
-
+      */}
+      
       {/* OVERVIEW */}
       <section className="mx-auto max-w-7xl px-6 py-28">
         <div className="grid gap-16 lg:grid-cols-2">
@@ -185,7 +186,7 @@ export default function YoungAgripreneurPage() {
                 </h2>
 
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The Young Agri-preneur Financing Project was established
+                  The Youth Agribusiness Financing Programme was established
                   to address the financial barriers that prevent young
                   people from entering and thriving within the agricultural
                   sector.

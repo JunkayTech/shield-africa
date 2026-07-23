@@ -8,12 +8,15 @@ import { Reveal, Counter } from "@/components/reveal";
 import { programs, stats, type Program } from "@/lib/site";
 
 const imageMap: Record<string, string> = {
+farmers_academy: "/images/farmers_academy.jpg",
 agriculture: "/images/agriculture.jpg",
-  education: "/images/education.jpg",
-  medical: "/images/medical.jpg",
-  women: "/images/women.jpg",
-  humanitarian: "/images/humanitarian.jpg",
-  agripreneur: "/images/agri-preneur.jpg",
+outreach: "/images/jeje.jpg",
+farming: "/images/naka.jpg",
+education: "/images/education.jpg",
+medical: "/images/medical.jpg",
+women: "/images/women.jpg",
+humanitarian: "/images/humanitarian.jpg",
+agripreneur: "/images/agri-preneur.jpg",
 };
 
 export default function ImpactPage() {

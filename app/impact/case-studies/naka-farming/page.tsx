@@ -2,24 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Users,
-  TrendingUp,
-  Briefcase,
-  MapPin,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
 
 const gallery: string[] = [];
-for (let i = 1; i <= 10; i++) {
-  gallery.push(`/images/projects/pagi-medical-outreach/${i}.jpg`);
+for (let i = 1; i <= 18; i++) {
+  gallery.push(`/images/projects/naka-farming/${i}.jpg`);
 }
 
-export default function PagiMedicalOutreachPage() {
+export default function NakaFarmingPage() {
   const pathname = usePathname();
 
   const caseStudies = [
@@ -36,34 +30,29 @@ export default function PagiMedicalOutreachPage() {
   return (
     <PageLayout>
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden pb-8">
+      <section className="relative min-h-screen overflow-hidden">
         <Image
-          src="/images/projects/pagi-medical-outreach/banner.jpg"
-          alt="Pagi Medical Outreach"
+          src="/images/projects/naka-farming/banner.jpg"
+          alt="Naka Farming Project"
           fill
           priority
           className="object-cover"
         />
-
         <div className="absolute inset-0 bg-black/60" />
-
         <div className="relative z-10 flex min-h-screen items-center">
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
                 <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Health & Community Initiative
+                  Community Agriculture Initiative
                 </span>
-
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
-                  Pagi
-                  <span className="block text-accent">Medical Outreach</span>
+                  Naka
+                  <span className="block text-accent">Farming Project</span>
                 </h1>
-
                 <p className="mt-6 text-xl leading-9 text-white/90">
-                  Delivering free medical services, health education and referrals to underserved communities to improve wellbeing and access to care.
+                  Community-based farming initiative in Naka region, promoting sustainable agricultural practices and improving local food security through collective farming.
                 </p>
-
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="#gallery"
@@ -78,53 +67,13 @@ export default function PagiMedicalOutreachPage() {
         </div>
       </section>
 
-      {/* IMPACT CARDS */}
-      <section id="impact" className="-mt-12 relative z-10 lg:z-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
-            <Reveal>
-              <div className="text-center">
-                <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">500+</h3>
-                <p className="text-muted-foreground">Beneficiaries Served</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={90}>
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">15+</h3>
-                <p className="text-muted-foreground">Health Professionals Engaged</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={180}>
-              <div className="text-center">
-                <Briefcase className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">25+</h3>
-                <p className="text-muted-foreground">Referred for Further Care</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={270}>
-              <div className="text-center">
-                <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">85%</h3>
-                <p className="text-muted-foreground">Improved Health Outcomes</p>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* CASE STUDIES NAV */}
-    {/*}
+      {/*}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="rounded-3xl border border-border bg-surface-elevated p-8 shadow-soft">
           <p className="mt-3 text-muted-foreground">
             Explore our featured projects and success stories.
           </p>
-
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {caseStudies.map((link) => {
               const isActive = pathname === link.href;
@@ -152,31 +101,27 @@ export default function PagiMedicalOutreachPage() {
         <div className="grid gap-16 lg:grid-cols-2">
           <Reveal>
             <Image
-              src="/images/projects/pagi-medical-outreach/1.jpg"
-              alt="Pagi Medical Outreach"
+              src="/images/projects/naka-farming/1.jpg"
+              alt="Naka Farming Project"
               width={900}
               height={700}
               className="rounded-3xl object-cover shadow-xl"
             />
           </Reveal>
-
-          <Reveal delay={120}>
-            <div className="flex items-center">
+          <Reveal>
+            <div className="flex h-full items-center">
               <div>
                 <span className="font-medium uppercase tracking-[0.18em] text-accent">
                   Project Overview
                 </span>
-
                 <h2 className="mt-4 font-serif text-5xl font-light text-primary">
-                  Bringing Healthcare Closer
+                  Community Agriculture
                 </h2>
-
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The Pagi Medical Outreach provides free primary healthcare, screenings, health education and referrals to remote and underserved communities, improving access and early detection of common conditions.
+                  Community-based farming initiative in Naka region, promoting sustainable agricultural practices and improving local food security through collective farming.
                 </p>
-
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  Through partnerships with local clinics and volunteer health professionals, the outreach strengthens local capacity and connects patients to ongoing care.
+                  By pooling resources, knowledge, and labor, the project empowers local farmers to increase productivity, strengthen resilience, and ensure food availability for households across the region.
                 </p>
               </div>
             </div>
@@ -186,17 +131,14 @@ export default function PagiMedicalOutreachPage() {
 
       {/* GALLERY */}
       <section id="gallery" className="mx-auto max-w-7xl px-6 py-20">
-        <Reveal>
-          <div className="text-center">
-            <h2 className="font-serif text-5xl font-light text-primary">
-              Project Gallery
-            </h2>
-
-            <p className="mt-4 text-lg text-muted-foreground">
-              Scenes from clinics, screenings, community health talks and patient support.
-            </p>
-          </div>
-        </Reveal>
+        <div className="text-center">
+          <h2 className="font-serif text-5xl font-light text-primary">
+            Project Gallery
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Highlights from collective farming activities, training sessions, and harvests in the Naka community.
+          </p>
+        </div>
 
         {/* Masonry layout for mobile & tablet */}
         <div className="mt-16 block lg:hidden">
@@ -208,7 +150,7 @@ export default function PagiMedicalOutreachPage() {
               >
                 <Image
                   src={image}
-                  alt={`Pagi Medical Outreach ${index + 1}`}
+                  alt={`Naka Farming ${index + 1}`}
                   width={600}
                   height={400}
                   className="object-cover w-full h-auto transition-transform duration-700 hover:scale-105"
@@ -222,18 +164,18 @@ export default function PagiMedicalOutreachPage() {
         {/* Grid layout for desktop */}
         <div className="mt-16 hidden lg:grid lg:grid-cols-4 lg:auto-rows-[200px] gap-4">
           {gallery.map((image, index) => {
-            const featured = index === 0 || index === 5; // two featured tiles for 10 images
-
+            const featured = index === 0 || index === 5 || index === 12;
             return (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-3xl shadow-lg ${featured ? "col-span-2 row-span-2" : ""}`}
+                className={`group relative overflow-hidden rounded-3xl shadow-lg
+                ${featured ? "col-span-2 row-span-2" : ""}`}
               >
                 <Image
                   src={image}
-                  alt={`Pagi Medical Outreach ${index + 1}`}
+                  alt={`Naka Farming ${index + 1}`}
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  sizes="(max-width:768px) 50vw, (max-width:1200px) 33vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/20" />
@@ -246,23 +188,19 @@ export default function PagiMedicalOutreachPage() {
       {/* CTA */}
       <section className="bg-primary-deep py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <Reveal>
-            <h2 className="font-serif text-5xl font-light">Partner with Shield Africa</h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 text-xl text-white/90">
-              Together we can empower more farmers and strengthen food security.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <Link
-              href="/contact"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-            >
-              Contact Us
-              <ArrowRight size={18} />
-            </Link>
-          </Reveal>
+          <h2 className="font-serif text-5xl font-light">
+            Strengthening Local Food Security
+          </h2>
+          <p className="mt-6 text-xl text-white/90">
+            Partner with us to expand sustainable farming practices and empower communities in Naka and beyond.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+          >
+            Partner With Us
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
     </PageLayout>

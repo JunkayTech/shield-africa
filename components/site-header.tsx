@@ -38,11 +38,11 @@ const nav = [
       },
       {
         label: "Naka Farming Project",
-        href: "/impact/case-studies/naka-farming-project",
+        href: "/impact/case-studies/naka-farming",
       },
       {
         label: "Jeje Outreach Project",
-        href: "/impact/case-studies/jeje-outreach-project",
+        href: "/impact/case-studies/jeje-outreach",
       },
       {
         label: "Pagi Medical Outreach",
