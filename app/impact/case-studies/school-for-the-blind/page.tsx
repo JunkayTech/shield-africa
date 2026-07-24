@@ -48,7 +48,7 @@ export default function SchoolForTheBlindPage() {
                   <span className="block text-accent">Blind</span>
                 </h1>
                 <p className="mt-6 text-xl leading-9 text-white/90">
-                  Providing educational resources, scholarships, and learning materials to underserved communities, ensuring access to quality education for all children.
+               Provided educational resources and learning materials to students at the School for the Blind in Abuja, FCT, supporting inclusive learning and improving access to quality education.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
