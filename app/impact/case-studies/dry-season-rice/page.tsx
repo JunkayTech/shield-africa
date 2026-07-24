@@ -51,9 +51,6 @@ export default function DrySeasonRicePage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Youth Empowerment Initiative
-                </span>
 
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Dry
@@ -64,9 +61,7 @@ export default function DrySeasonRicePage() {
                 </h1>
 
                 <p className="mt-6 text-xl leading-9 text-white/90">
-                  Supporting young people with financing, mentorship,
-                  business development and agricultural entrepreneurship
-                  opportunities.
+                  Empowered farmers in Oju Local Government Area, Benue State, through the provision of agri-inputs and training for dry-season rice cultivation, boosting food production and year-round income generation.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -93,37 +88,27 @@ export default function DrySeasonRicePage() {
                 300+
               </h3>
               <p className="text-muted-foreground">
-                Youth Beneficiaries
+                Beneficiaries
               </p>
             </div>
 
             <div className="text-center">
               <Wallet className="mx-auto mb-3 h-10 w-10 text-accent" />
               <h3 className="font-serif text-4xl font-medium text-primary">
-                ₦100M+
+                40%+
               </h3>
               <p className="text-muted-foreground">
-                Financing Facilitated
+                Yield Increase
               </p>
             </div>
 
             <div className="text-center">
               <Briefcase className="mx-auto mb-3 h-10 w-10 text-accent" />
               <h3 className="font-serif text-4xl font-medium text-primary">
-                150+
+                35+
               </h3>
               <p className="text-muted-foreground">
-                Agribusinesses Started
-              </p>
-            </div>
-
-            <div className="text-center">
-              <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-              <h3 className="font-serif text-4xl font-medium text-primary">
-                85%
-              </h3>
-              <p className="text-muted-foreground">
-                Business Growth Rate
+                Average Increase in Income
               </p>
             </div>
           </div>
@@ -180,23 +165,12 @@ export default function DrySeasonRicePage() {
                   Project Overview
                 </span>
 
-                <h2 className="mt-4 font-serif text-5xl font-light text-primary">
-                  Financing the Future of Agriculture
-                </h2>
-
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The Dry Season Rice Project was established
-                  to address the financial barriers that prevent young
-                  people from entering and thriving within the agricultural
-                  sector.
+                  The Dry Season Rice Project was established to improve food security and strengthen the livelihoods of smallholder farmers by promoting year-round rice cultivation. The project supported farmers in Oju Local Government Area of Benue State with access to quality agri-inputs, climate-smart farming training, and extension support for dry-season rice production.
                 </p>
 
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  Through strategic financing support, mentorship,
-                  entrepreneurship training and market linkage
-                  opportunities, the project empowers young people to
-                  establish profitable agribusiness ventures and create
-                  sustainable livelihoods.
+                  By equipping farmers with the knowledge and resources needed to cultivate beyond the traditional rainy season, the project increased agricultural productivity, enhanced household incomes, and contributed to a more resilient and sustainable local food system.
                 </p>
               </div>
             </div>
@@ -210,11 +184,6 @@ export default function DrySeasonRicePage() {
           <h2 className="font-serif text-5xl font-light text-primary">
             Project Gallery
           </h2>
-
-          <p className="mt-4 text-lg text-muted-foreground">
-            Highlights from trainings, financing events, mentorship
-            programmes and youth-led agribusiness activities.
-          </p>
         </div>
 
 {/* Masonry layout for mobile & tablet */}
@@ -268,27 +237,31 @@ export default function DrySeasonRicePage() {
 </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-deep py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-serif text-5xl font-light">
-            Empower the Next Generation
-          </h2>
-
-          <p className="mt-6 text-xl text-white/90">
-            Join us in creating opportunities for young agricultural
-            entrepreneurs across Africa.
-          </p>
-
-          <Link
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-          >
-            Partner With Us
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="bg-primary-deep py-24 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <Reveal>
+              <h2 className="font-serif text-5xl font-light">
+                Partner With Shield Africa
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="mt-6 text-xl text-white/90">
+                Join us in advancing sustainable development, empowering communities,
+                and building a brighter future across Africa.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <Link
+                href="/contact"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+              >
+                Get Involved
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
+          </div>
+        </section>
     </PageLayout>
   );
 }

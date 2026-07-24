@@ -52,10 +52,6 @@ export default function IchwaIdpPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Community Resilience Initiative
-                </span>
-
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   ICHWA
                   <span className="block text-accent">IDP Support</span>

@@ -51,18 +51,10 @@ export default function JejeOutreachPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Community Outreach Initiative
-                </span>
-
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Jeje
                   <span className="block text-accent">Outreach Project</span>
                 </h1>
-
-                <p className="mt-6 text-xl leading-9 text-white/90">
-                  Delivering essential services, training and support to underserved communities through health, education and livelihood activities.
-                </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
@@ -72,45 +64,6 @@ export default function JejeOutreachPage() {
                     Explore Gallery
                   </a>
                 </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* IMPACT CARDS */}
-      <section id="impact" className="-mt-12 relative z-10 lg:z-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
-            <Reveal>
-              <div className="text-center">
-                <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">2,000+</h3>
-                <p className="text-muted-foreground">People Reached</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={90}>
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">18</h3>
-                <p className="text-muted-foreground">Communities Engaged</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={180}>
-              <div className="text-center">
-                <Briefcase className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">600+</h3>
-                <p className="text-muted-foreground">Kits & Trainings Delivered</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={270}>
-              <div className="text-center">
-                <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">65%</h3>
-                <p className="text-muted-foreground">Improved Household Outcomes</p>
               </div>
             </Reveal>
           </div>
@@ -172,11 +125,11 @@ export default function JejeOutreachPage() {
                 </h2>
 
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The Jeje Outreach Project brings targeted interventions to underserved communities — combining health camps, educational support, livelihood training and community dialogues to build resilience and opportunity.
+                  The Jeje Community Outreach was implemented to provide essential relief and improve the well-being of underserved households in Jeje Community, Nasarawa State. The intervention focused on delivering basic necessities, including food items and clothing materials, to support vulnerable community members and address immediate welfare needs.
                 </p>
 
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  Working with local partners, volunteers and community leaders, the project focuses on sustainable, locally owned solutions that improve wellbeing and economic prospects.
+                  Through this outreach, the project provided timely assistance to community members while promoting social inclusion and strengthening support for households facing economic challenges.
                 </p>
               </div>
             </div>
@@ -191,10 +144,6 @@ export default function JejeOutreachPage() {
             <h2 className="font-serif text-5xl font-light text-primary">
               Project Gallery
             </h2>
-
-            <p className="mt-4 text-lg text-muted-foreground">
-              Moments from distributions, trainings, community dialogues and impact activities.
-            </p>
           </div>
         </Reveal>
 

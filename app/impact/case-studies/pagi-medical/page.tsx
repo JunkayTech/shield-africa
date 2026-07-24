@@ -51,9 +51,6 @@ export default function PagiMedicalOutreachPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Health & Community Initiative
-                </span>
 
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Pagi
@@ -61,7 +58,7 @@ export default function PagiMedicalOutreachPage() {
                 </h1>
 
                 <p className="mt-6 text-xl leading-9 text-white/90">
-                  Delivering free medical services, health education and referrals to underserved communities to improve wellbeing and access to care.
+                  Delivered free medical services and health education to underserved communities, improving access to care and supporting better health outcomes.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -172,11 +169,11 @@ export default function PagiMedicalOutreachPage() {
                 </h2>
 
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The Pagi Medical Outreach provides free primary healthcare, screenings, health education and referrals to remote and underserved communities, improving access and early detection of common conditions.
+                  The Pagi Medical Outreach was conducted to improve access to primary healthcare services for underserved communities through the provision of free medical screenings, health education, consultations, and referrals for further care.
                 </p>
 
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  Through partnerships with local clinics and volunteer health professionals, the outreach strengthens local capacity and connects patients to ongoing care.
+                 The outreach provided community members with essential healthcare support, promoted early detection of common health conditions, and connected beneficiaries to appropriate medical services through the involvement of healthcare professionals and local partners.
                 </p>
               </div>
             </div>
@@ -243,28 +240,31 @@ export default function PagiMedicalOutreachPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-deep py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <Reveal>
-            <h2 className="font-serif text-5xl font-light">Partner with Shield Africa</h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 text-xl text-white/90">
-              Together we can empower more farmers and strengthen food security.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <Link
-              href="/contact"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-            >
-              Contact Us
-              <ArrowRight size={18} />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="bg-primary-deep py-24 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <Reveal>
+              <h2 className="font-serif text-5xl font-light">
+                Partner With Shield Africa
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="mt-6 text-xl text-white/90">
+                Join us in advancing sustainable development, empowering communities,
+                and building a brighter future across Africa.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <Link
+                href="/contact"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+              >
+                Get Involved
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
+          </div>
+        </section>
     </PageLayout>
   );
 }

@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
-import { Logo } from "./logo";
+import { LogoTransparent as LogoT } from "./logo";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -23,7 +25,8 @@ export function SiteFooter() {
     <footer className="relative mt-32 overflow-hidden bg-[oklch(0.28_0.05_195)] text-white">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <div className="grid items-center gap-8 border-b border-white/15 pb-12 lg:grid-cols-[auto_1fr_auto]">
-          <Logo inverted />
+          {/* ✅ Transparent logo for footer */}
+          <LogoT className="h-12 w-auto" />
           <p className="max-w-xl text-sm leading-relaxed text-white/70 lg:px-8">
             Shield Africa is a non-profit advancing sustainable development,
             humanitarian aid and economic dignity across Nigeria and the African

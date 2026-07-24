@@ -43,9 +43,6 @@ export default function SchoolForTheBlindPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-3xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Inclusive Education Initiative
-                </span>
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-7xl">
                   School for the
                   <span className="block text-accent">Blind</span>
@@ -61,42 +58,6 @@ export default function SchoolForTheBlindPage() {
                     View Gallery
                   </Link>
                 </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* IMPACT CARDS */}
-      <section id="impact" className="-mt-12 relative z-10 lg:z-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
-            <Reveal>
-              <div className="text-center">
-                <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">1,200+</h3>
-                <p className="text-muted-foreground">Learners Supported</p>
-              </div>
-            </Reveal>
-            <Reveal delay={90}>
-              <div className="text-center">
-                <BookOpen className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">3,500+</h3>
-                <p className="text-muted-foreground">Learning Materials Distributed</p>
-              </div>
-            </Reveal>
-            <Reveal delay={180}>
-              <div className="text-center">
-                <Heart className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">150+</h3>
-                <p className="text-muted-foreground">Scholarships Awarded</p>
-              </div>
-            </Reveal>
-            <Reveal delay={270}>
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">12</h3>
-                <p className="text-muted-foreground">Communities Reached</p>
               </div>
             </Reveal>
           </div>
@@ -157,10 +118,10 @@ export default function SchoolForTheBlindPage() {
                   Access to Quality Education for All
                 </h2>
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  Providing educational resources, scholarships, and learning materials to underserved communities, ensuring access to quality education for all children.
+                  The School for the Blind Support Project was implemented to improve access to inclusive education and enhance the learning experience of visually impaired pupils at the School for the Blind in Abuja, FCT. Recognizing the challenges students face in accessing appropriate learning resources, the project provided Braille versions of core textbooks, writing materials designed for visually impaired learners, and food supplies to support their well-being.
                 </p>
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  We partner with local schools, teachers, and caregivers to deliver braille and tactile learning resources, train educators in inclusive teaching methods, and support students with scholarships and assistive devices.
+                The intervention reached all pupils from Primary 1 to Primary 6, ensuring they had access to essential educational resources and a more conducive learning environment, while promoting equity and inclusion in education.
                 </p>
                 <div className="mt-8 flex gap-4">
                   <Link
@@ -241,35 +202,31 @@ export default function SchoolForTheBlindPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-deep py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <Reveal>
-            <h2 className="font-serif text-4xl font-light">Help us expand inclusive learning</h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 text-lg text-white/90">
-              Your support helps us provide learning materials, scholarships, and teacher training to more children in need.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className="mt-10 flex items-center justify-center gap-4">
-              <Link
-                href="/donate"
-                className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-              >
-                Donate Now
-              </Link>
+         {/* CTA */}
+        <section className="bg-primary-deep py-24 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <Reveal>
+              <h2 className="font-serif text-5xl font-light">
+                Partner With Shield Africa
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="mt-6 text-xl text-white/90">
+                Join us in advancing sustainable development, empowering communities,
+                and building a brighter future across Africa.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-medium text-white"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
               >
                 Get Involved
+                <ArrowRight size={18} />
               </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+            </Reveal>
+          </div>
+        </section>
     </PageLayout>
   );
 }

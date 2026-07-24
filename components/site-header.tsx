@@ -25,7 +25,7 @@ const nav = [
         href: "/impact/case-studies/farmers-academy",
       },
       {
-        label: "Young Agri-preneur Financing",
+        label: "Youth Agribusiness Financing Programme",
         href: "/impact/case-studies/young-agripreneur-financing",
       },
       {
@@ -33,7 +33,7 @@ const nav = [
         href: "/impact/case-studies/dry-season-rice",
       },
       {
-        label: "School for the Blind",
+        label: "School for the Blind Outreach",
         href: "/impact/case-studies/school-for-the-blind",
       },
       {
@@ -49,7 +49,7 @@ const nav = [
         href: "/impact/case-studies/pagi-medical",
       },
       {
-        label: "VAW Campaign",
+        label: "Violence against Women Campaign",
         href: "/impact/case-studies/vaw-campaign",
       },
     ],

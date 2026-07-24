@@ -43,9 +43,6 @@ export default function NakaFarmingPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Community Agriculture Initiative
-                </span>
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Naka
                   <span className="block text-accent">Farming Project</span>
@@ -114,14 +111,11 @@ export default function NakaFarmingPage() {
                 <span className="font-medium uppercase tracking-[0.18em] text-accent">
                   Project Overview
                 </span>
-                <h2 className="mt-4 font-serif text-5xl font-light text-primary">
-                  Community Agriculture
-                </h2>
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  Community-based farming initiative in Naka region, promoting sustainable agricultural practices and improving local food security through collective farming.
+                 The Naka Community Farming Project was implemented to strengthen food security and promote sustainable agriculture through community-led farming in Naka, Benue State. In collaboration with the traditional leadership, the project established demonstration farms for rice and guinea corn while engaging and training community youths on good agricultural practices and sustainable farming techniques.
                 </p>
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  By pooling resources, knowledge, and labor, the project empowers local farmers to increase productivity, strengthen resilience, and ensure food availability for households across the region.
+                The project provided community members with hands-on farming experience, enabling youths to develop practical agricultural skills while contributing to the cultivation of key food crops within the community. Through this approach, the project supported increased local participation in agriculture and encouraged the adoption of sustainable farming methods.
                 </p>
               </div>
             </div>
@@ -185,24 +179,31 @@ export default function NakaFarmingPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-deep py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-serif text-5xl font-light">
-            Strengthening Local Food Security
-          </h2>
-          <p className="mt-6 text-xl text-white/90">
-            Partner with us to expand sustainable farming practices and empower communities in Naka and beyond.
-          </p>
-          <Link
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-          >
-            Partner With Us
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="bg-primary-deep py-24 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <Reveal>
+              <h2 className="font-serif text-5xl font-light">
+                Partner With Shield Africa
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="mt-6 text-xl text-white/90">
+                Join us in advancing sustainable development, empowering communities,
+                and building a brighter future across Africa.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <Link
+                href="/contact"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+              >
+                Get Involved
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
+          </div>
+        </section>
     </PageLayout>
   );
 }

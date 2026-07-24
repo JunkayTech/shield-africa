@@ -49,11 +49,6 @@ export default function ContactPage() {
 
               <div className="rounded-3xl border border-border bg-surface p-7">
                 <div className="font-serif text-lg">Our commitments</div>
-                <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                  <li>Reply to every partnership inquiry within 48 hours.</li>
-                  <li>Share due-diligence packets on request.</li>
-                  <li>Co-design programs — never deliver them to you.</li>
-                </ul>
               </div>
             </div>
           </Reveal>
@@ -87,9 +82,6 @@ export default function ContactPage() {
                 )}
                 {tab === "Partnership" && (
                   <Field label="Partnership type" name="type" placeholder="Funder, Government, Implementing partner" />
-                )}
-                {tab === "Volunteer" && (
-                  <Field label="Area of interest" name="area" placeholder="Agriculture, Education, Health..." />
                 )}
                 <div className="sm:col-span-2">
                   <label className="text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">

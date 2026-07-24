@@ -51,9 +51,6 @@ export default function YoungAgripreneurPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Youth Empowerment Initiative
-                </span>
 
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
                   Youth
@@ -270,25 +267,26 @@ export default function YoungAgripreneurPage() {
 
       </section>
 
-      {/* CTA */}
+     {/* CTA */}
       <section className="bg-primary-deep py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-serif text-5xl font-light">
-            Empower the Next Generation
-          </h2>
-
-          <p className="mt-6 text-xl text-white/90">
-            Join us in creating opportunities for young agricultural
-            entrepreneurs across Africa.
-          </p>
-
-          <Link
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-          >
-            Partner With Us
-            <ArrowRight size={18} />
-          </Link>
+          <Reveal>
+            <h2 className="font-serif text-5xl font-light">Partner with Shield Africa</h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="mt-6 text-xl text-white/90">
+              Together we can empower more farmers and strengthen food security.
+            </p>
+          </Reveal>
+          <Reveal delay={240}>
+            <Link
+              href="/contact"
+              className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+            >
+              Contact Us
+              <ArrowRight size={18} />
+            </Link>
+          </Reveal>
         </div>
       </section>
     </PageLayout>

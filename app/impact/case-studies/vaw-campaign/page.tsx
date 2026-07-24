@@ -45,17 +45,13 @@ export default function VawCampaignPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-4xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Protection & Awareness Initiative
-                </span>
-
                 <h1 className="mt-6 font-serif text-5xl font-light text-white md:text-8xl">
-                  VAW
+                  Violence Against Women
                   <span className="block text-accent">Campaign</span>
                 </h1>
 
                 <p className="mt-6 text-xl leading-9 text-white/90">
-                  The Violence Against Women Campaign raises awareness, strengthens referral pathways, and provides survivor-centered support to reduce gender-based violence and protect women and girls.
+                 Implemented the Violence Against Women Campaign to raise awareness on gender-based violence, promote advocacy, and encourage collective action towards the protection, safety, and empowerment of women and girls.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -66,45 +62,6 @@ export default function VawCampaignPage() {
                     Explore Gallery
                   </a>
                   </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* IMPACT CARDS */}
-      <section id="impact" className="-mt-12 relative z-10 lg:z-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-2xl md:grid-cols-4">
-            <Reveal>
-              <div className="text-center">
-                <Users className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">3,200+</h3>
-                <p className="text-muted-foreground">Survivors Supported</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={90}>
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">20</h3>
-                <p className="text-muted-foreground">Communities Reached</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={180}>
-              <div className="text-center">
-                <Briefcase className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">1,100+</h3>
-                <p className="text-muted-foreground">Legal & Psychosocial Referrals</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={270}>
-              <div className="text-center">
-                <TrendingUp className="mx-auto mb-3 h-10 w-10 text-accent" />
-                <h3 className="font-serif text-4xl font-medium text-primary">58%</h3>
-                <p className="text-muted-foreground">Increase in Reporting</p>
               </div>
             </Reveal>
           </div>
@@ -166,11 +123,7 @@ export default function VawCampaignPage() {
                 </h2>
 
                 <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-                  The VAW Campaign combines awareness-raising, survivor-centered services, legal aid and psychosocial support to prevent violence and support recovery for women and girls.
-                </p>
-
-                <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  Working with local authorities, health providers and community leaders, the campaign strengthens referral pathways and builds community capacity to prevent and respond to gender-based violence.
+                 The Violence Against Women Campaign was implemented to raise awareness on gender-based violence and promote the rights, safety, and dignity of women and girls. The campaign engaged community members through sensitization and advocacy activities that increased public understanding of the causes, consequences, and prevention of violence against women.
                 </p>
               </div>
             </div>
@@ -185,10 +138,6 @@ export default function VawCampaignPage() {
             <h2 className="font-serif text-5xl font-light text-primary">
               Project Gallery
             </h2>
-
-            <p className="mt-4 text-lg text-muted-foreground">
-              Scenes from awareness sessions, safe-space activities, legal clinics and community dialogues.
-            </p>
           </div>
         </Reveal>
 
@@ -237,28 +186,31 @@ export default function VawCampaignPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-deep py-24 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <Reveal>
-            <h2 className="font-serif text-5xl font-light">Support VAW Campaign</h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="mt-6 text-xl text-white/90">
-              Partner with us to prevent violence, protect survivors and build safer communities.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <Link
-              href="/contact"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
-            >
-              Contact Us
-              <ArrowRight size={18} />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="bg-primary-deep py-24 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <Reveal>
+              <h2 className="font-serif text-5xl font-light">
+                Partner With Shield Africa
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="mt-6 text-xl text-white/90">
+                Join us in advancing sustainable development, empowering communities,
+                and building a brighter future across Africa.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <Link
+                href="/contact"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-medium text-primary"
+              >
+                Get Involved
+                <ArrowRight size={18} />
+              </Link>
+            </Reveal>
+          </div>
+        </section>
     </PageLayout>
   );
 }

@@ -43,9 +43,6 @@ export default function FarmersAcademyPage() {
           <div className="mx-auto max-w-7xl px-6">
             <Reveal>
               <div className="max-w-3xl">
-                <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-white backdrop-blur">
-                  Agricultural Development Initiative
-                </span>
                 <h1 className="mt-6 font-serif text-6xl font-light text-white md:text-8xl">
                   Farmers'
                   <span className="block text-accent">Academy</span>

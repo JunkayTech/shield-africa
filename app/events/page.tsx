@@ -25,21 +25,21 @@ export default function EventsPage() {
   const pastEvents = [
     {
       title: "Shield Africa Summit 2024",
-      date: "March 2024",
+      date: "November 15th,2024",
       location: "Abuja, Nigeria",
       body: "Annual summit convening partners and communities.",
       thumbnail: "/images/events/summit2024.jpg",
     },
     {
       title: "Shield Africa Summit 2025",
-      date: "March 2025",
+      date: "November 20th, 2025",
       location: "Abuja, Nigeria",
       body: "Annual summit convening partners and communities.",
       thumbnail: "/images/events/summit2025.jpg",
     },
     {
       title: "Green Insight Launch 2024/2025",
-      date: "2024–2025",
+      date: "August 29th, 2025",
       location: "Abuja, Nigeria",
       body: "Launch of Green Insight initiative for sustainable development.",
       thumbnail: "/images/events/green_insight.jpg",
@@ -60,8 +60,8 @@ export default function EventsPage() {
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-6 max-w-4xl font-serif text-5xl font-light leading-[1.05] text-balance sm:text-7xl">
-              Where the work{" "}
-              <span className="italic text-primary">meets the field.</span>
+              Conversations that drive{" "}
+              <span className="italic text-primary">impact.</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
