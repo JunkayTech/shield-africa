@@ -123,20 +123,6 @@ export default function SchoolForTheBlindPage() {
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 The intervention reached all pupils from Primary 1 to Primary 6, ensuring they had access to essential educational resources and a more conducive learning environment, while promoting equity and inclusion in education.
                 </p>
-                <div className="mt-8 flex gap-4">
-                  <Link
-                    href="/impact"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-5 py-2.5 text-sm font-medium transition hover:bg-secondary"
-                  >
-                    All projects <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white"
-                  >
-                    Support this work
-                  </Link>
-                </div>
               </div>
             </div>
           </Reveal>
