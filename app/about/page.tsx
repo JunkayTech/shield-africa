@@ -71,14 +71,6 @@ export default function AboutPage() {
                 height={1000}
                 className="aspect-[4/5] w-full object-cover"
               />
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl glass-card p-5">
-                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
-                  Since 2014
-                </div>
-                <div className="mt-1 font-serif text-lg">
-                  Operating in 14 Nigerian states + 4 African nations.
-                </div>
-              </div>
             </div>
           </Reveal>
 
