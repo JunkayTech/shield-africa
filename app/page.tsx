@@ -207,6 +207,7 @@ const imageMap: Record<string, string> = {
 
 export function ProgramCard({ program }: { program: Program }) {
   const img = imageMap[program.image] || imageMap.agriculture;
+
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated">
       <div className="relative aspect-[5/4] overflow-hidden">
@@ -221,6 +222,7 @@ export function ProgramCard({ program }: { program: Program }) {
           {program.category}
         </span>
       </div>
+
       <div className="flex flex-1 flex-col p-7">
         <div className="text-xs text-muted-foreground">{program.location}</div>
         <h3 className="mt-2 font-serif text-2xl font-medium leading-snug text-foreground">
@@ -229,14 +231,19 @@ export function ProgramCard({ program }: { program: Program }) {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           {program.description}
         </p>
-        <div className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium">
+
+        <Link
+          href={program.caseStudyUrl}
+          className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium transition hover:text-primary"
+        >
           <span className="text-foreground">More</span>
           <ArrowUpRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </div>
+        </Link>
       </div>
     </article>
   );
 }
+
 
 function UpcomingEvents() {
   return (

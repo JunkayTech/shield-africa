@@ -1,7 +1,7 @@
 export const programs = [
   {
     slug: "farmers-academy",
-    title: "Shield Africa Farmers' Academy",
+    title: "Farmers' Academy",
     category: "Agriculture",
     location: "Nationwide, Nigeria",
     description:
@@ -11,7 +11,7 @@ export const programs = [
   },
   {
     slug: "young-agripreneur",
-    title: "Young Agri-preneur Financing Project",
+    title: "Youth Agribusiness Financing Programme",
     category: "Agri-preneur",
     location: "Pan-Nigeria",
     description:
@@ -21,7 +21,7 @@ export const programs = [
   },
   {
     slug: "dry-season-rice",
-    title: "Dry Season Rice Farming Project",
+    title: "Dry Season Rice Project",
     category: "Agriculture",
     location: "Oju, Benue State",
     description:
