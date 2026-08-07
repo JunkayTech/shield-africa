@@ -15,7 +15,7 @@ export default function HomePage() {
       <Marquee />
       <Stats />
       <Programs />
-      <UpcomingEvents />
+     {/*} <UpcomingEvents />*/}
       <Testimonials />
       <Newsletter />
     </PageLayout>
@@ -244,7 +244,7 @@ export function ProgramCard({ program }: { program: Program }) {
   );
 }
 
-
+{/*}
 function UpcomingEvents() {
   return (
     <section className="py-24">
@@ -323,6 +323,7 @@ function UpcomingEvents() {
     </section>
   );
 }
+*/}
 
 function Testimonials() {
   const items = [
