@@ -230,7 +230,7 @@ export function ProgramCard({ program }: { program: Program }) {
           {program.description}
         </p>
         <div className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium">
-          <span className="text-foreground">Read case study</span>
+          <span className="text-foreground">More</span>
           <ArrowUpRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
       </div>
