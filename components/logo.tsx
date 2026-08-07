@@ -33,7 +33,7 @@ export function LogoTransparent({ className }: { className?: string }) {
     >
       <Image
         src="/images/logo2.png"   // transparent background version
-        alt="Shield Africa Logo Transparent"
+        alt="Shield Africa"
         width={200}
         height={80}
         className="w-28 md:w-36 h-auto object-contain"
