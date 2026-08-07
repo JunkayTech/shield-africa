@@ -5,7 +5,7 @@ export const programs = [
     category: "Agriculture",
     location: "Nationwide, Nigeria",
     description:
-      "A flagship residential training program equipping smallholder farmers with climate-smart agronomy, financial literacy and market linkages.",
+      "Empowering farmers through practical training, climate-smart agriculture, agribusiness development, and sustainable food production systems.",
     image: "farmers_academy",
     caseStudyUrl: "/impact/case-studies/farmers-academy",
   },
@@ -15,7 +15,7 @@ export const programs = [
     category: "Agri-preneur",
     location: "Pan-Nigeria",
     description:
-      "Catalytic financing, mentorship and equipment access for first-time agribusiness founders under 35.",
+      "Supporting young people with financing, mentorship, business development and agricultural entrepreneurship opportunities.",
     image: "agripreneur",
     caseStudyUrl: "/impact/case-studies/young-agripreneur-financing"
   },
@@ -25,7 +25,7 @@ export const programs = [
     category: "Agriculture",
     location: "Oju, Benue State",
     description:
-      "Irrigation infrastructure and improved seed varieties enabling year-round rice production for 2,400 households.",
+      "Empowered farmers in Oju Local Government Area, Benue State, through the provision of agri-inputs and training for dry-season rice cultivation, boosting food production and year-round income generation.",
     image: "rice_farming",
     caseStudyUrl: "/impact/case-studies/dry-season-rice",
   },
