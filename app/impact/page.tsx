@@ -32,15 +32,14 @@ export default function ImpactPage() {
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-6 max-w-5xl font-serif text-5xl font-light leading-[1.05] text-balance sm:text-7xl">
-              Measured in lives,{" "}
-              <span className="italic text-primary">not pageviews.</span>
+              Rooted in {" "}
+              <span className="italic text-primary">Results</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Every number below is grounded in third-party verified field
-              data. We publish what worked, what didn&apos;t, and what we changed
-              because of it.
+Development that reaches people and strengthens systems.
+We combine local insight, strategic partnerships, and practical solutions to deliver meaningful outcomes across communities.
             </p>
           </Reveal>
         </div>
