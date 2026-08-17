@@ -60,7 +60,7 @@ export default function EventsPage() {
       date: "Friday, 28th August, 2026",
       location: "Skywide Studios, Abuja, Nigeria",
       body: "Join us to celebrate the launch of Green Insight Publication (Vol. 2).",
-      thumbnail: "/images/events/green_insight.png",
+      thumbnail: "/images/events/green_insight2.png",
     },
   ];
 
