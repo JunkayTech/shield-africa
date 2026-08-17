@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArrowRight, ArrowUpRight, Sparkles, Quote } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Quote } from "lucide-react";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal, Counter } from "@/components/reveal";
 import { programs, stats, type Program } from "@/lib/site";
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Marquee />
       <Stats />
       <Programs />
-     {/*} <UpcomingEvents />*/}
+      <UpcomingEvents />
       <Testimonials />
       <Newsletter />
     </PageLayout>
@@ -46,15 +46,13 @@ function Hero() {
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
-
         <Reveal delay={120}>
           <h1 className="mt-8 max-w-4xl font-serif text-5xl font-light leading-[1.02] text-white text-balance sm:text-7xl lg:text-[5.5rem]">
             Advancing
             <br />
             <span className="italic text-accent"> Sustainable Development</span>
-            <br/>
-            across{" "}
-            <span className="italic text-accent">Africa.</span>
+            <br />
+            across <span className="italic text-accent">Africa.</span>
           </h1>
         </Reveal>
 
@@ -88,14 +86,14 @@ function Hero() {
 }
 
 function Marquee() {
-const items = [
-  "Agrifood Systems",
-  "Education",
-  "Gender Equality",
-  "Humanitarian Aid",
-  "Youth Empowerment",
-  "Climate Resilience",
-];
+  const items = [
+    "Agrifood Systems",
+    "Education",
+    "Gender Equality",
+    "Humanitarian Aid",
+    "Youth Empowerment",
+    "Climate Resilience",
+  ];
   return (
     <div className="border-y border-border bg-surface py-6 overflow-hidden">
       <div className="flex w-max animate-marquee gap-6 sm:gap-12 whitespace-nowrap">
@@ -127,9 +125,7 @@ function Stats() {
                 Our impact across communities.
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-                Empowering communities through sustainable development
-                initiatives, humanitarian aid and capacity building programs
-                across Africa.
+                Empowering communities through sustainable development initiatives, humanitarian aid and capacity building programs across Africa.
               </p>
               <Link
                 href="/impact"
@@ -244,7 +240,6 @@ export function ProgramCard({ program }: { program: Program }) {
   );
 }
 
-{/*}
 function UpcomingEvents() {
   return (
     <section className="py-24">
@@ -260,10 +255,9 @@ function UpcomingEvents() {
         <Reveal delay={120}>
           <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 sm:p-8">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-              
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/events/sustainability_lab_july.png"
+                  src="/images/events/green_insight.png"
                   alt="Sustainability Lab Event"
                   width={1200}
                   height={800}
@@ -277,33 +271,27 @@ function UpcomingEvents() {
                 </div>
 
                 <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
-                  Sustainability Lab 2026 - JULY EDITION
+                  Green Insight BOOK LAUNCH
                 </h3>
 
-                  <p>
-                    <span className="font-medium text-foreground">
-                      Topic:
-                    </span>{" "}
-                    Leadership and Ethical Decision-making for Business Resilience.
-                  </p>
+              {/*  <p>
+                  <span className="font-medium text-foreground">Topic:</span>{" "}
+                  Leadership and Ethical Decision-making for Business Resilience.
+                </p> */}
 
                 <div className="mt-8 space-y-3 text-sm text-muted-foreground">
                   <p>
                     <span className="font-medium text-foreground">Date:</span>{" "}
-                    Friday, 31st July, 2026.
+                    Friday, 28th August, 2026.
                   </p>
 
                   <p>
                     <span className="font-medium text-foreground">Time:</span>{" "}
-                    4:00PM Prompt
+                    10:00AM Prompt
                   </p>
                   <p>
-                    <span className="font-medium text-foreground">
-                      Location:
-                    </span>{" "}
-                    SKYWIDE STUDIOS 2nd Floor, Blook B, A.R.O Plaza, 
-                    2105 Herbert Macaulay Way, Wuse Zone 6
-                    Abuja, Nigeria
+                    <span className="font-medium text-foreground">Location:</span>{" "}
+                    SKYWIDE STUDIOS 2nd Floor, Block B, A.R.O Plaza, 2105 Herbert Macaulay Way, Wuse Zone 6 Abuja, Nigeria
                   </p>
                 </div>
 
@@ -315,7 +303,6 @@ function UpcomingEvents() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
-
             </div>
           </div>
         </Reveal>
@@ -323,7 +310,6 @@ function UpcomingEvents() {
     </section>
   );
 }
-*/}
 
 function Testimonials() {
   const items = [
@@ -365,7 +351,7 @@ function Testimonials() {
             </h2>
           </div>
         </Reveal>
-        {/* Change grid to 2 columns on md+ screens */}
+
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {items.map((t, i) => (
             <Reveal key={i} delay={i * 100}>
@@ -403,8 +389,7 @@ function Newsletter() {
                 Stay updated on impact stories from the field.
               </h2>
               <p className="mt-5 max-w-md text-base text-muted-foreground">
-              Stay updated with our programmes, community activities,
-              development initiatives and upcoming events across Africa.
+                Stay updated with our programmes, community activities, development initiatives and upcoming events across Africa.
               </p>
               <form
                 className="mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
