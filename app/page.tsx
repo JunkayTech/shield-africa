@@ -72,10 +72,10 @@ function Hero() {
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/contact"
+              href="/events#register"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-accent-foreground shadow-elevated transition hover:-translate-y-0.5"
             >
-              Partner With Us
+              Register: Green Insight (Vol 2)
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
