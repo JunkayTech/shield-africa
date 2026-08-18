@@ -114,6 +114,24 @@ const pastEvents = [
     thumbnail: "/images/events/summit2024.jpg",
     mobileThumbnail: "/images/events/summit2024.jpg",
   },
+    {
+    slug: "shield-africa-summit-2025",
+    title: "Shield Africa Summit 2025",
+    date: "November 20th, 2025",
+    location: "Abuja, Nigeria",
+    body: "Annual summit convening partners and communities.",
+    thumbnail: "/images/events/summit2025.jpg",
+    mobileThumbnail: "/images/events/summit2025.jpg",
+  },
+    {
+    slug: "green-insight-launch-2024-2025",
+    title: "Green Insight Launch 2024/2025",
+    date: "August 29th, 2025",
+    location: "Abuja, Nigeria",
+    body: "Launch of Green Insight initiative for sustainable development.",
+    thumbnail: "/images/events/green_insight.jpg",
+    mobileThumbnail: "/images/events/green_insight.jpg",
+  },
 ];
 
   const filtered = filter === "Upcoming" ? upcomingEvents : pastEvents;
