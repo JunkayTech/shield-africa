@@ -8,15 +8,15 @@ import { Reveal, Counter } from "@/components/reveal";
 import { programs, stats, type Program } from "@/lib/site";
 
 const imageMap: Record<string, string> = {
-farmers_academy: "/images/farmers_academy.jpg",
-agriculture: "/images/agriculture.jpg",
-outreach: "/images/jeje.jpg",
-farming: "/images/naka.jpg",
-education: "/images/education.jpg",
-medical: "/images/medical.jpg",
-women: "/images/women.jpg",
-humanitarian: "/images/humanitarian.jpg",
-agripreneur: "/images/agri-preneur.jpg",
+  farmers_academy: "/images/farmers_academy.jpg",
+  agriculture: "/images/agriculture.jpg",
+  outreach: "/images/jeje.jpg",
+  farming: "/images/naka.jpg",
+  education: "/images/education.jpg",
+  medical: "/images/medical.jpg",
+  women: "/images/women.jpg",
+  humanitarian: "/images/humanitarian.jpg",
+  agripreneur: "/images/agri-preneur.jpg",
 };
 
 export default function ImpactPage() {
@@ -32,39 +32,39 @@ export default function ImpactPage() {
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-6 max-w-5xl font-serif text-5xl font-light leading-[1.05] text-balance sm:text-7xl">
-              Rooted in {" "}
+              Rooted in{" "}
               <span className="italic text-primary">Results</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-Development that reaches people and strengthens systems.
-We combine local insight, strategic partnerships, and practical solutions to deliver meaningful outcomes across communities.
+              Development that reaches people and strengthens systems.
+              We combine local insight, strategic partnerships, and practical
+              solutions to deliver meaningful outcomes across communities.
             </p>
           </Reveal>
         </div>
       </section>
 
-{/* Stats dashboard */}
-<section className="bg-surface py-20">
-  <div className="mx-auto max-w-7xl px-5 sm:px-8">
-    <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-3">
-      {stats.map((s, i) => (
-        <Reveal key={s.label} delay={i * 40}>
-          <div className="h-full bg-surface-elevated p-7">
-            <div className="font-serif text-4xl font-light sm:text-5xl">
-              <Counter to={s.value} suffix={s.suffix} />
-            </div>
-            <div className="mt-3 text-sm text-muted-foreground">
-              {s.label}
-            </div>
+      {/* Stats dashboard */}
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-border md:grid-cols-3">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 40}>
+                <div className="h-full bg-surface-elevated p-7">
+                  <div className="font-serif text-4xl font-light sm:text-5xl">
+                    <Counter to={s.value} suffix={s.suffix} />
+                  </div>
+                  <div className="mt-3 text-sm text-muted-foreground">
+                    {s.label}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      ))}
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       {/* Featured case studies */}
       <section className="py-28 sm:py-36">
@@ -106,22 +106,7 @@ We combine local insight, strategic partnerships, and practical solutions to del
                     <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                       {p.description}
                     </p>
-                    <div className="mt-8 grid grid-cols-3 gap-6 border-t border-border pt-6">
-                      {[
-                        { v: "12K+", l: "Direct beneficiaries" },
-                        { v: "94%", l: "Retention" },
-                        { v: "3.2x", l: "Income uplift" },
-                      ].map((m) => (
-                        <div key={m.l}>
-                          <div className="font-serif text-2xl font-light">
-                            {m.v}
-                          </div>
-                          <div className="mt-1 text-xs text-muted-foreground">
-                            {m.l}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    {/* Metrics grid removed */}
                   </div>
                 </article>
               </Reveal>
@@ -198,13 +183,13 @@ function ProgramCard({ program }: { program: Program }) {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           {program.description}
         </p>
-      <Link
-  href={program.caseStudyUrl}
-  className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium"
->
-  <span className="text-foreground">More</span>
-  <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
-      </Link>
+        <Link
+          href={program.caseStudyUrl}
+          className="mt-6 flex items-center justify-between border-t border-border pt-5 text-sm font-medium"
+        >
+          <span className="text-foreground">More</span>
+          <ArrowRight className="h-4 w-4 text-primary transition group-hover:translate-x-0.5" />
+        </Link>
       </div>
     </article>
   );
