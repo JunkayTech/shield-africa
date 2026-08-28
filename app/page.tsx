@@ -75,7 +75,7 @@ function Hero() {
               href="/events#register"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-accent-foreground shadow-elevated transition hover:-translate-y-0.5"
             >
-              Register: Green Insight (Vol 2)
+              Register For Shield Africa Event
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
@@ -267,7 +267,7 @@ function UpcomingEvents() {
 
               <div>
                 <div className="inline-flex rounded-full bg-accent/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary">
-                  Featured Event
+                 Ongoing Event.
                 </div>
 
                 <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
