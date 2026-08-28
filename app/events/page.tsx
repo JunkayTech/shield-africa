@@ -13,7 +13,7 @@ export default function EventsPage() {
   const [filter, setFilter] =
     useState<(typeof types)[number]>("Upcoming");
 
-  const ongoingEvents = [
+  const pastEvents = [
     {
       slug: "green-insight-book-launch-2026",
       title: "Green Insight Book Launch — Vol. 2",
@@ -23,9 +23,6 @@ export default function EventsPage() {
       thumbnail: "/images/events/green_insight.png",
       mobileThumbnail: "/images/events/green_insight2.png",
     },
-  ];
-
-  const pastEvents = [
     {
       slug: "shield-africa-summit-2025",
       title: "Shield Africa Summit 2025",
@@ -59,7 +56,7 @@ export default function EventsPage() {
     filter === "Past"
       ? pastEvents
       : filter === "Ongoing"
-      ? ongoingEvents
+      ? []
       : [];
 
   return (
@@ -119,7 +116,7 @@ export default function EventsPage() {
       <section className="overflow-hidden pb-20 sm:pb-32">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="min-w-0 overflow-hidden rounded-2xl border border-border bg-surface-elevated sm:rounded-3xl">
-            
+
             {/* =====================================================
                 UPCOMING — NO EVENT
             ===================================================== */}
@@ -214,13 +211,6 @@ export default function EventsPage() {
                         </Link>
                       </div>
                     </div>
-
-                    {/* Event status */}
-                    {filter === "Ongoing" && (
-                      <span className="inline-flex w-fit max-w-full items-center justify-center rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary md:self-center">
-                        Ongoing
-                      </span>
-                    )}
                   </article>
                 </Reveal>
               ))
