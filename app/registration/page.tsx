@@ -71,9 +71,11 @@ const NIGERIAN_STATES = [
   "Other",
 ] as const;
 
+const SUMMIT_2026_SLUG = "shield-africa-summit-2026";
+
 const upcomingEvents = [
   {
-    slug: "shield-africa-summit-2026",
+    slug: SUMMIT_2026_SLUG,
     title: "Shield Africa Summit 2026",
     date: "Thursday, 19th November, 2026",
   },
@@ -136,7 +138,7 @@ function RegistrationForm({
     stateOther: "",
     futureInfo: "yes",
     consent: false,
-    eventSlug: upcomingEvents[0]?.slug || "",
+    eventSlug: SUMMIT_2026_SLUG,
   });
 
   const [submitting, setSubmitting] = useState(false);
@@ -220,6 +222,7 @@ function RegistrationForm({
 
       const payload = {
         ...form,
+        eventSlug: SUMMIT_2026_SLUG,
         submittedAt: new Date().toISOString(),
       };
 
