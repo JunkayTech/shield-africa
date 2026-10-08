@@ -13,6 +13,19 @@ export default function EventsPage() {
   const [filter, setFilter] =
     useState<(typeof types)[number]>("Upcoming");
 
+  const upcomingEvents = [
+    {
+      slug: "shield-africa-summit-2026",
+      title: "Shield Africa Summit 2026",
+      date: "Thursday, 19th November, 2026",
+      location:
+        "Skywide Event Marquee, 2 Tunde Idiagbon Street, City Park 2, Utako, Abuja, Nigeria",
+      body: "Strengthening Africa’s Capacity for Sustainable Development: Investing in People, Systems, and Economic Opportunities. Starts at 9:00 AM.",
+      thumbnail: "/images/events/summit2026/Shield%20Africa%20Summit%202026.png",
+      mobileThumbnail: "/images/events/summit2026/Shield%20Africa%20Summit%202026.png",
+    },
+  ];
+
   const pastEvents = [
     {
       slug: "green-insight-book-launch-2026",
@@ -53,11 +66,11 @@ export default function EventsPage() {
   ];
 
   const filtered =
-    filter === "Past"
-      ? pastEvents
-      : filter === "Ongoing"
-      ? []
-      : [];
+    filter === "Upcoming"
+      ? upcomingEvents
+      : filter === "Past"
+        ? pastEvents
+        : [];
 
   return (
     <PageLayout>
@@ -117,24 +130,7 @@ export default function EventsPage() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="min-w-0 overflow-hidden rounded-2xl border border-border bg-surface-elevated sm:rounded-3xl">
 
-            {/* =====================================================
-                UPCOMING — NO EVENT
-            ===================================================== */}
-            {filter === "Upcoming" ? (
-              <div className="p-10 text-center sm:p-16">
-                <div className="mx-auto max-w-xl">
-                  <h2 className="font-serif text-2xl font-medium sm:text-3xl">
-                    No event currently.
-                  </h2>
-
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    There are no upcoming events at the moment.
-                    Please check back soon for new events and
-                    programmes.
-                  </p>
-                </div>
-              </div>
-            ) : filtered.length === 0 ? (
+            {filtered.length === 0 ? (
               <div className="p-8 text-center text-muted-foreground sm:p-10">
                 No events recorded.
               </div>
@@ -197,14 +193,14 @@ export default function EventsPage() {
                         {e.body}
                       </p>
 
-                      {/* Event Highlights */}
+                      {/* Event action */}
                       <div className="mt-4">
                         <Link
-                          href={`/events/${e.slug}`}
+                          href={filter === "Upcoming" ? "/registration#register" : `/events/${e.slug}`}
                           className="inline-flex max-w-full items-center gap-2 rounded-full border border-border bg-surface-elevated px-4 py-2 text-sm font-medium transition hover:bg-foreground hover:text-background"
                         >
                           <span className="truncate">
-                            Event Highlights
+                            {filter === "Upcoming" ? "Register now" : "Event Highlights"}
                           </span>
 
                           <ArrowUpRight className="h-4 w-4 shrink-0" />

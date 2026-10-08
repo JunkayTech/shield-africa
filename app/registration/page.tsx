@@ -73,9 +73,9 @@ const NIGERIAN_STATES = [
 
 const upcomingEvents = [
   {
-    slug: "green-insight-book-launch-2026",
-    title: "Green Insight Book Launch — Vol. 2",
-    date: "Friday, 28th August, 2026",
+    slug: "shield-africa-summit-2026",
+    title: "Shield Africa Summit 2026",
+    date: "Thursday, 19th November, 2026",
   },
 ];
 

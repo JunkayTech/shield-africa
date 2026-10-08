@@ -29,7 +29,7 @@ export function SiteFooter() {
           <LogoT className="h-12 w-auto" />
           <p className="max-w-xl text-sm leading-relaxed text-white/70 lg:px-8">
             Shield Africa is a non-profit advancing sustainable development,
-            humanitarian aid and economic dignity across African.
+            humanitarian aid and economic dignity across Africa.
           </p>
           <Link
             href="/contact"

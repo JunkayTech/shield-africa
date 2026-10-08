@@ -16,8 +16,7 @@ export default function HomePage() {
       <Stats />
       <Programs />
 
-      {/* Upcoming Event section temporarily disabled */}
-      {/* <UpcomingEvents /> */}
+      <UpcomingEvents />
 
       <Testimonials />
       <Newsletter />
@@ -274,7 +273,7 @@ export function ProgramCard({ program }: { program: Program }) {
   );
 }
 
-/*
+
 function UpcomingEvents() {
   return (
     <section className="py-24">
@@ -292,8 +291,8 @@ function UpcomingEvents() {
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/events/green_insight.png"
-                  alt="Sustainability Lab Event"
+                  src="/images/events/summit2026/Shield%20Africa%20Summit%202026.png"
+                  alt="Shield Africa Summit 2026 flyer"
                   width={1200}
                   height={800}
                   className="h-full w-full object-cover"
@@ -306,26 +305,33 @@ function UpcomingEvents() {
                 </div>
 
                 <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
-                  Green Insight BOOK LAUNCH
+                  Shield Africa Summit 2026
                 </h3>
 
                 <div className="mt-8 space-y-3 text-sm text-muted-foreground">
                   <p>
+                    <span className="font-medium text-foreground">Theme:</span>{" "}
+                    Strengthening Africa’s Capacity for Sustainable Development: Investing in People, Systems, and Economic Opportunities
+                  </p>
+                </div>
+
+                <div className="mt-8 space-y-3 text-sm text-muted-foreground">
+                  <p>
                     <span className="font-medium text-foreground">Date:</span>{" "}
-                    Friday, 28th August, 2026.
+                    Thursday, 19th November, 2026.
                   </p>
 
                   <p>
                     <span className="font-medium text-foreground">Time:</span>{" "}
-                    10:00AM Prompt
+                    9:00AM Prompt
                   </p>
 
                   <p>
                     <span className="font-medium text-foreground">
                       Location:
                     </span>{" "}
-                    SKYWIDE STUDIOS 2nd Floor, Block B, A.R.O Plaza, 2105
-                    Herbert Macaulay Way, Wuse Zone 6 Abuja, Nigeria
+                    Skywide Event Marquee, 2, Tunde Idiagbon Street, City Park 2,
+                    Utako, Abuja, Nigeria.
                   </p>
                 </div>
 
@@ -344,7 +350,7 @@ function UpcomingEvents() {
     </section>
   );
 }
-*/
+
 
 function Testimonials() {
   const items = [
