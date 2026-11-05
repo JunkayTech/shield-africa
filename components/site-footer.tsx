@@ -1,8 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Linkedin,
+  Globe,
+  Twitter,
+} from "lucide-react";
 import { LogoTransparent as LogoT } from "./logo";
+import { useSiteContent } from "@/hooks/use-site-content";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -12,15 +20,20 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-const socials = [
-  { href: "https://www.facebook.com/shieldafricasdi", label: "Facebook", Icon: Facebook },
-  { href: "https://www.instagram.com/shieldafricaofficial", label: "Instagram", Icon: Instagram },
-  { href: "https://x.com/ShieldAfrica_", label: "X (Twitter)", Icon: XIcon },
-  { href: "https://youtube.com/@shieldafrica", label: "YouTube", Icon: Youtube },
-  { href: "https://www.linkedin.com/company/shield-africa-sdi/", label: "LinkedIn", Icon: Linkedin },
-];
+function socialIcon(label: string) {
+  const l = label.toLowerCase();
+  if (l.includes("facebook")) return Facebook;
+  if (l.includes("instagram")) return Instagram;
+  if (l.includes("youtube")) return Youtube;
+  if (l.includes("linkedin")) return Linkedin;
+  if (l.includes("x") || l.includes("twitter")) return XIcon;
+  if (l.includes("tweet")) return Twitter;
+  return Globe;
+}
 
 export function SiteFooter() {
+  const { footer, contact } = useSiteContent();
+
   return (
     <footer className="relative mt-32 overflow-hidden bg-[oklch(0.28_0.05_195)] text-white">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
@@ -28,8 +41,7 @@ export function SiteFooter() {
           {/* ✅ Transparent logo for footer */}
           <LogoT className="h-12 w-auto" />
           <p className="max-w-xl text-sm leading-relaxed text-white/70 lg:px-8">
-            Shield Africa is a non-profit advancing sustainable development,
-            humanitarian aid and economic dignity across Africa.
+            {footer.blurb}
           </p>
           <Link
             href="/contact"
@@ -61,9 +73,9 @@ export function SiteFooter() {
           <div>
             <h4 className="font-serif text-base font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
-              <li>inquiries@shieldafrica.org</li>
-              <li>+234 810 060 0657</li>
-              <li>Shield Africa Office, 2105 Herbert Macaulay Way, Wuse Zone 6, FCT Abuja</li>
+              <li>{contact.email}</li>
+              <li>{contact.phone}</li>
+              <li>{contact.address}</li>
             </ul>
           </div>
         </div>
@@ -73,18 +85,21 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-xs text-white/60 sm:flex-row sm:px-8">
           <p>&copy; {new Date().getFullYear()} Shield Africa. All rights reserved.</p>
           <div className="flex items-center gap-2">
-            {socials.map(({ href, label, Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/80 transition hover:bg-accent hover:border-accent hover:text-accent-foreground"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            {footer.socials.map(({ href, label }) => {
+              const Icon = socialIcon(label);
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/80 transition hover:bg-accent hover:border-accent hover:text-accent-foreground"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -8,12 +8,12 @@ import { usePathname } from "next/navigation";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
 
-const gallery: string[] = [];
-for (let i = 1; i <= 20; i++) {
-  gallery.push(`/images/projects/blind/${i}.jpg`);
-}
+import { useSiteContent } from "@/hooks/use-site-content";
+import { resolveGallery } from "@/lib/galleries";
 
 export default function SchoolForTheBlindPage() {
+  const { galleries } = useSiteContent();
+  const gallery = resolveGallery("school-for-the-blind", galleries);
   const pathname = usePathname();
 
  const caseStudies = [

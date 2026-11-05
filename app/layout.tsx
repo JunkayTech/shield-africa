@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import { TrackPageview } from '@/components/track-pageview'
 
 export const metadata: Metadata = {
   title: 'Shield Africa — Sustainable Development Across Africa',
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <body className="font-sans antialiased">
+        <TrackPageview />
         {children}
       </body>
     </html>

@@ -4,11 +4,13 @@ import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
+import { useSiteContent } from "@/hooks/use-site-content";
 
 const tabs = ["Partnership", "Volunteer", "General"] as const;
 
 export default function ContactPage() {
   const [tab, setTab] = useState<(typeof tabs)[number]>("Partnership");
+  const { contact } = useSiteContent();
   return (
     <PageLayout>
       <section className="relative pt-40 pb-20 sm:pt-48 sm:pb-24">
@@ -34,17 +36,17 @@ export default function ContactPage() {
               <ContactItem
                 icon={<Mail className="h-5 w-5" />}
                 label="Email"
-                value="inquiries@shieldafrica.org"
+                value={contact.email}
               />
               <ContactItem
                 icon={<Phone className="h-5 w-5" />}
                 label="Phone"
-                value="+234 810 060 0657"
+                value={contact.phone}
               />
               <ContactItem
                 icon={<MapPin className="h-5 w-5" />}
                 label="Headquarters"
-                value="Shield Africa Office, 2105 Herbert Macaulay Way, Wuse Zone 6, FCT Abuja"
+                value={contact.address}
               />
 
               <div className="rounded-3xl border border-border bg-surface p-7">

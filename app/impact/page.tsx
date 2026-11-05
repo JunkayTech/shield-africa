@@ -5,7 +5,8 @@ import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal, Counter } from "@/components/reveal";
-import { programs, stats, type Program } from "@/lib/site";
+import { useSiteContent } from "@/hooks/use-site-content";
+import type { Program } from "@/lib/content-types";
 
 const imageMap: Record<string, string> = {
   farmers_academy: "/images/farmers_academy.jpg",
@@ -20,6 +21,7 @@ const imageMap: Record<string, string> = {
 };
 
 export default function ImpactPage() {
+  const { programs, stats } = useSiteContent();
   const featured = programs.slice(0, 3);
   return (
     <PageLayout>
@@ -160,7 +162,10 @@ export default function ImpactPage() {
 }
 
 function ProgramCard({ program }: { program: Program }) {
-  const img = imageMap[program.image] || imageMap.agriculture;
+  const img =
+    program.image.startsWith("/") || program.image.startsWith("http")
+      ? program.image
+      : imageMap[program.image] || imageMap.agriculture;
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated">
       <div className="relative aspect-[5/4] overflow-hidden">

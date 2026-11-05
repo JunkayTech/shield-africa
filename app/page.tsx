@@ -6,25 +6,35 @@ import { useEffect, useState } from "react";
 import { ArrowRight, ArrowUpRight, Quote } from "lucide-react";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal, Counter } from "@/components/reveal";
-import { programs, stats, type Program } from "@/lib/site";
+import { useSiteContent, useSiteEvents } from "@/hooks/use-site-content";
+import type {
+  Program,
+  SiteContent,
+  SiteEvent,
+  Stat,
+  Testimonial,
+} from "@/lib/content-types";
 
 export default function HomePage() {
+  const content = useSiteContent();
+  const events = useSiteEvents();
+
   return (
     <PageLayout>
-      <Hero />
-      <Marquee />
-      <Stats />
-      <Programs />
+      <Hero hero={content.hero} />
+      <Marquee items={content.marquee} />
+      <Stats stats={content.stats} impact={content.impact} />
+      <Programs programs={content.programs} />
 
-      <UpcomingEvents />
+      <UpcomingEvents events={events} />
 
-      <Testimonials />
-      <Newsletter />
+      <Testimonials items={content.testimonials} />
+      <Newsletter data={content.newsletter} />
     </PageLayout>
   );
 }
 
-function Hero() {
+function Hero({ hero }: { hero: SiteContent["hero"] }) {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -39,7 +49,7 @@ function Hero() {
     <section className="relative isolate min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80"
+          src={hero.backgroundImage}
           alt="African community gathered at golden hour"
           fill
           priority
@@ -57,39 +67,36 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-40">
         <Reveal delay={120}>
           <h1 className="mt-8 max-w-4xl font-serif text-5xl font-light leading-[1.02] text-white text-balance sm:text-7xl lg:text-[5.5rem]">
-            Advancing
+            {hero.titleLine1}
             <br />
-            <span className="italic text-accent">
-              Sustainable Development
-            </span>
+            <span className="italic text-accent">{hero.titleLine2}</span>
             <br />
-            across <span className="italic text-accent">Africa.</span>
+            {hero.titleLine3Prefix}{" "}
+            <span className="italic text-accent">{hero.titleLine3Accent}</span>
           </h1>
         </Reveal>
 
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            We design and implement impactful programmes that strengthen food
-            systems, promote quality education, gender inclusion, and improve
-            livelihoods.
+            {hero.subtitle}
           </p>
         </Reveal>
 
         <Reveal delay={360}>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
-              href="/impact"
+              href={hero.primaryCtaHref}
               className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-foreground shadow-elevated transition hover:-translate-y-0.5"
             >
-              Explore Our Impact
+              {hero.primaryCtaLabel}
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </Link>
 
             <Link
-              href="/events#register"
+              href={hero.secondaryCtaHref}
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-accent-foreground shadow-elevated transition hover:-translate-y-0.5"
             >
-              Register For Shield Africa Event
+              {hero.secondaryCtaLabel}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
@@ -99,16 +106,7 @@ function Hero() {
   );
 }
 
-function Marquee() {
-  const items = [
-    "Agrifood Systems",
-    "Education",
-    "Gender Equality",
-    "Humanitarian Aid",
-    "Youth Empowerment",
-    "Climate Resilience",
-  ];
-
+function Marquee({ items }: { items: string[] }) {
   return (
     <div className="border-y border-border bg-surface py-6 overflow-hidden">
       <div className="flex w-max animate-marquee gap-6 sm:gap-12 whitespace-nowrap">
@@ -126,7 +124,13 @@ function Marquee() {
   );
 }
 
-function Stats() {
+function Stats({
+  stats,
+  impact,
+}: {
+  stats: Stat[];
+  impact: SiteContent["impact"];
+}) {
   return (
     <section className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -138,13 +142,11 @@ function Stats() {
               </div>
 
               <h2 className="mt-4 font-serif text-4xl font-light leading-tight sm:text-5xl">
-                Our impact across communities.
+                {impact.heading}
               </h2>
 
               <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-                Empowering communities through sustainable development
-                initiatives, humanitarian aid and capacity building programs
-                across Africa.
+                {impact.text}
               </p>
 
               <Link
@@ -180,7 +182,7 @@ function Stats() {
   );
 }
 
-function Programs() {
+function Programs({ programs }: { programs: Program[] }) {
   return (
     <section className="relative bg-surface py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -228,7 +230,10 @@ const imageMap: Record<string, string> = {
 };
 
 export function ProgramCard({ program }: { program: Program }) {
-  const img = imageMap[program.image] || imageMap.agriculture;
+  const img =
+    program.image.startsWith("/") || program.image.startsWith("http")
+      ? program.image
+      : imageMap[program.image] || imageMap.agriculture;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-elevated">
@@ -274,7 +279,13 @@ export function ProgramCard({ program }: { program: Program }) {
 }
 
 
-function UpcomingEvents() {
+function UpcomingEvents({ events }: { events: SiteEvent[] }) {
+  const featured =
+    events.find((e) => e.featured && e.status === "upcoming") ??
+    events.find((e) => e.status === "upcoming");
+
+  if (!featured) return null;
+
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -291,8 +302,8 @@ function UpcomingEvents() {
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/events/summit2026/Shield%20Africa%20Summit%202026.png"
-                  alt="Shield Africa Summit 2026 flyer"
+                  src={featured.thumbnail || featured.images[0] || "/placeholder.jpg"}
+                  alt={`${featured.title} flyer`}
                   width={1200}
                   height={800}
                   className="h-full w-full object-cover"
@@ -305,33 +316,36 @@ function UpcomingEvents() {
                 </div>
 
                 <h3 className="mt-5 font-serif text-4xl font-light leading-tight">
-                  Shield Africa Summit 2026
+                  {featured.title}
                 </h3>
 
-                <div className="mt-8 space-y-3 text-sm text-muted-foreground">
-                  <p>
-                    <span className="font-medium text-foreground">Theme:</span>{" "}
-                    Strengthening Africa’s Capacity for Sustainable Development: Investing in People, Systems, and Economic Opportunities
-                  </p>
-                </div>
+                {featured.theme && (
+                  <div className="mt-8 space-y-3 text-sm text-muted-foreground">
+                    <p>
+                      <span className="font-medium text-foreground">Theme:</span>{" "}
+                      {featured.theme}
+                    </p>
+                  </div>
+                )}
 
                 <div className="mt-8 space-y-3 text-sm text-muted-foreground">
                   <p>
                     <span className="font-medium text-foreground">Date:</span>{" "}
-                    Thursday, 19th November, 2026.
+                    {featured.date}
                   </p>
 
-                  <p>
-                    <span className="font-medium text-foreground">Time:</span>{" "}
-                    9:00AM Prompt
-                  </p>
+                  {featured.time && (
+                    <p>
+                      <span className="font-medium text-foreground">Time:</span>{" "}
+                      {featured.time}
+                    </p>
+                  )}
 
                   <p>
                     <span className="font-medium text-foreground">
                       Location:
                     </span>{" "}
-                    Skywide Event Marquee, 2, Tunde Idiagbon Street, City Park 2,
-                    Utako, Abuja, Nigeria.
+                    {featured.location}
                   </p>
                 </div>
 
@@ -352,34 +366,7 @@ function UpcomingEvents() {
 }
 
 
-function Testimonials() {
-  const items = [
-    {
-      quote:
-        "Before now, we have experienced a lot of difficulties in farming as a result of insufficient funds to acquire the necessities for farming. We are very grateful for Shield Africa's intervention and we pray that you will continue to have and also reach out to other communities as you have reached us today.",
-      name: "Mrs. Abi Rose Eneh",
-      role: "Chairlady, Owolaole Housewives · Multipurpose Association",
-    },
-    {
-      quote:
-        "The lack of access to fertilizers has crippled the productivity of our farming enterprise in this community. This is because of the exorbitant prices which has made it relatively impossible to acquire these inputs by most of our farmers. But today, Shield Africa has distributed this agro inputs free of charge and we are so excited.",
-      name: "Mr. Ogoh Abi Johnson",
-      role: "Chairman · Ayigbu Multipurpose Cooperative Society",
-    },
-    {
-      quote:
-        "We are saying thank you to Shield Africa for this initiative, your vision and mission. I know that it is not easy to work with the visually impaired children as well as the staff. However, you have remained persistent and courageous. We are grateful for both the learning and feeding materials you have brought us.",
-      name: "Mrs. Rose Uganden",
-      role: "Principal · School for the Blind, FCT Abuja",
-    },
-    {
-      quote:
-        "On behalf of myself and community, I want to sincerely appreciate Shield Africa for this initiative of providing agro inputs which I know will go a long way in cushioning the many adversities we have been faced with as a farming community.",
-      name: "Chief Opah Emmanuel Oboh",
-      role: "Chief · Oju Community, Benue State",
-    },
-  ];
-
+function Testimonials({ items }: { items: Testimonial[] }) {
   return (
     <section className="bg-primary-deep py-28 text-white sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -418,7 +405,7 @@ function Testimonials() {
   );
 }
 
-function Newsletter() {
+function Newsletter({ data }: { data: SiteContent["newsletter"] }) {
   return (
     <section className="py-28">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
@@ -433,12 +420,11 @@ function Newsletter() {
               </div>
 
               <h2 className="mt-4 max-w-xl font-serif text-3xl font-light leading-tight sm:text-5xl">
-                Stay updated on impact stories from the field.
+                {data.heading}
               </h2>
 
               <p className="mt-5 max-w-md text-base text-muted-foreground">
-                Stay updated with our programmes, community activities,
-                development initiatives and upcoming events across Africa.
+                {data.text}
               </p>
 
               <form

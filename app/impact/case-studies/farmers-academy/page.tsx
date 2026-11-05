@@ -8,12 +8,12 @@ import { usePathname } from "next/navigation";   // ✅ import pathname hook
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
 
-const gallery: string[] = [];
-for (let i = 1; i <= 34; i++) {
-  gallery.push(`/images/projects/farmers/${i}.jpg`);
-}
+import { useSiteContent } from "@/hooks/use-site-content";
+import { resolveGallery } from "@/lib/galleries";
 
 export default function FarmersAcademyPage() {
+  const { galleries } = useSiteContent();
+  const gallery = resolveGallery("farmers-academy", galleries);
   const pathname = usePathname();   // ✅ get current path
 
   const caseStudies = [

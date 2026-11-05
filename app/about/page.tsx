@@ -5,9 +5,10 @@ import Image from "next/image";
 import { ArrowRight, Users, Wallet, MapPin, Truck, Heart } from "lucide-react";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
-import { values } from "@/lib/site";
+import { useSiteContent } from "@/hooks/use-site-content";
 
 export default function AboutPage() {
+  const { values } = useSiteContent();
   return (
     <PageLayout>
       {/* Intro / Banner */}

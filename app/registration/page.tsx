@@ -259,6 +259,18 @@ function RegistrationForm({
       }
 
       /* =========================
+         MIRROR TO ADMIN DASHBOARD
+         (non-blocking copy so the team can
+         see & check in attendees at /admin)
+      ========================= */
+
+      fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {});
+
+      /* =========================
          SUCCESS MESSAGE
       ========================= */
 

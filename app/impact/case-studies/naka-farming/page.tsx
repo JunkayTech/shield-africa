@@ -8,12 +8,12 @@ import { usePathname } from "next/navigation";
 import { PageLayout } from "@/components/page-layout";
 import { Reveal } from "@/components/reveal";
 
-const gallery: string[] = [];
-for (let i = 1; i <= 18; i++) {
-  gallery.push(`/images/projects/naka-farming/${i}.jpg`);
-}
+import { useSiteContent } from "@/hooks/use-site-content";
+import { resolveGallery } from "@/lib/galleries";
 
 export default function NakaFarmingPage() {
+  const { galleries } = useSiteContent();
+  const gallery = resolveGallery("naka-farming", galleries);
   const pathname = usePathname();
 
   const caseStudies = [
